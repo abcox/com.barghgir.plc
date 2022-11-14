@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.web", "com.barghgir.plc.web\com.barghgir.plc.web.csproj", "{64017CE5-A613-443E-9449-72B4B93B1EEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.barghgir.plc.api", "com.barghgir.plc.api\com.barghgir.plc.api.csproj", "{0624554C-84E7-472F-BCE4-D90DA186691A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{64017CE5-A613-443E-9449-72B4B93B1EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64017CE5-A613-443E-9449-72B4B93B1EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64017CE5-A613-443E-9449-72B4B93B1EEF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0624554C-84E7-472F-BCE4-D90DA186691A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0624554C-84E7-472F-BCE4-D90DA186691A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0624554C-84E7-472F-BCE4-D90DA186691A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0624554C-84E7-472F-BCE4-D90DA186691A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
