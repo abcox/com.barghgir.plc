@@ -1,4 +1,8 @@
-﻿namespace com.barghgir.plc.web;
+﻿using com.barghgir.plc.web.Services;
+using com.barghgir.plc.web.ViewModels;
+using MauiIcons.Material;
+
+namespace com.barghgir.plc.web;
 
 public static class MauiProgram
 {
@@ -11,8 +15,13 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+			})
+			.UseMaterialMauiIcons();
 
-		return builder.Build();
+        builder.Services.AddSingleton<CoursesViewModel>();
+        builder.Services.AddSingleton<CourseService>();
+        builder.Services.AddSingleton<MainPage>();
+
+        return builder.Build();
 	}
 }

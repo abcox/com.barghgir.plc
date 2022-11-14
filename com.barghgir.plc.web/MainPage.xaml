@@ -1,9 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:MauiIcons.Material;assembly=MauiIcons.Material"
+             xmlns:model="clr-namespace:com.barghgir.plc.web.Models"
+             xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
+             x:DataType="viewmodel:CoursesViewModel"
+             Title="{Binding Title}"
              x:Class="com.barghgir.plc.web.MainPage">
-
-    <ScrollView>
+    
+    <Grid ColumnDefinitions="*,*"
+          RowDefinitions="*,Auto">
+        <CollectionView BackgroundColor="Gray"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Courses}"
+                        SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="model:Course">
+                    <Grid Padding="5">
+                        <Frame HeightRequest="200"
+                               Padding="0">
+                            <Grid Padding="0">
+                                <Image Aspect="AspectFill"
+                                       Source="{Binding imageSourceUrl}"
+                                       HeightRequest="200"
+                                       WidthRequest="400"
+                                       Opacity=".85">
+                                </Image>
+                                <Rectangle BackgroundColor="Black" Opacity=".25"/>
+                                <Rectangle BackgroundColor="Black" Opacity=".25" Margin="15"/>
+                                <Grid RowDefinitions="Auto,Auto,*" Margin="30">
+                                    <Label TextColor="White" Text="{Binding title}" FontSize="22" FontAttributes="Bold" Opacity=".7"></Label>
+                                    <Label Grid.Row="1" TextColor="White" Text="{Binding subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity=".7"></Label>
+                                    <Grid Grid.Row="2" ColumnDefinitions="*,*"
+                                          RowDefinitions="*,*">
+                                        <!--<material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity=".7"/>-->
+                                        <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity=".7" IconSize="20"/>
+                                        <!--<Image Aspect="Center" Source="{material:Icon Icon=Headset}"/>-->
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Get Courses"
+                Grid.Row="1"
+                Margin="10"
+                Command="{Binding GetCoursesCommand}"
+                IsEnabled="{Binding IsNotBusy}">
+        </Button>
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"/>
+    </Grid>
+        
+    <!--<ScrollView>
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -24,7 +79,7 @@
             <Label
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.Description="Welcome to dot net Multi platform App UI"
                 FontSize="18"
                 HorizontalOptions="Center" />
 
@@ -36,6 +91,6 @@
                 HorizontalOptions="Center" />
 
         </VerticalStackLayout>
-    </ScrollView>
+    </ScrollView>-->
 
 </ContentPage>
