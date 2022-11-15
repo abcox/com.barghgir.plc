@@ -12,10 +12,8 @@ During initial start of API project, the SSL require trust of certificate, and p
 
 2. Again, answer 'Yes' to the dialog about installing certificate.
 
-| ![Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png](../Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png){ width=50% }
-|:--:|
+<img src="https://github.com/abcox/com.barghgir.plc/blob/master/Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" alt="Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" width="400"/>
 
 3. Answer 'Yes' to the dialog
 
-| ![Api-SSLCert-Trust-Prompt-03-Timeout.png](Api-SSLCert-Trust-Prompt-03-Timeout.png){ width=50% }
-|:--:|
+<img src="https://github.com/abcox/com.barghgir.plc/blob/master/Api-SSLCert-Trust-Prompt-03-Timeout.png" alt="Api-SSLCert-Trust-Prompt-03-Timeout.png" width="500"/>
