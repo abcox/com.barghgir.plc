@@ -1,4 +1,5 @@
-﻿using com.barghgir.plc.web.Models;
+﻿using com.barghgir.plc.web.Helpers;
+using com.barghgir.plc.web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,25 +12,41 @@ namespace com.barghgir.plc.web.Services
 {
     public class CourseService
     {
-        HttpClient httpClient;
+        //HttpClient httpClient;
 
         List<Course> courseList = new();
 
         public CourseService()
         {
-            httpClient = new HttpClient();
+            //httpClient = new HttpClient();
         }
+
+        public static string BaseAddress =
+            DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.2.53:45455" /* "http://localhost:5260" "https://10.0.2.2:45455" "https://192.168.2.53:45455" "https://10.0.2.2:5001" */ : "https://localhost:7132";
+
+        public static string CourseListUrl = $"{BaseAddress}/course/list/";
 
         public async Task<List<Course>> GetCourses()
         {
-            var url = "";
+            var url = CourseListUrl; // "https://10.0.2.2:5001/course/list";
             var testJsonFilename = "courses.json";
             try
             {
                 if (!string.IsNullOrEmpty(url))
                 {
-                    Console.WriteLine($"Getting courses from url {url}");
+                    Console.WriteLine($"Getting course list from url {url}");
 
+#if DEBUG
+                    //HttpsClientHandlerService handler = new HttpsClientHandlerService();
+                    //HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
+
+                    //HttpClient httpClient = new DevHttpsConnectionHelper(7132).HttpClient;
+                    var handler = new HttpsClientHandlerService();
+                    HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
+
+#else
+                    HttpClient httpClient = new HttpClient();
+#endif
                     var response = await httpClient.GetAsync(url);
 
                     if (response.IsSuccessStatusCode)

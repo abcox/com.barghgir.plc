@@ -5,7 +5,15 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.web", "com.barghgir.plc.web\com.barghgir.plc.web.csproj", "{64017CE5-A613-443E-9449-72B4B93B1EEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.barghgir.plc.api", "com.barghgir.plc.api\com.barghgir.plc.api.csproj", "{0624554C-84E7-472F-BCE4-D90DA186691A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.api", "com.barghgir.plc.api\com.barghgir.plc.api.csproj", "{0624554C-84E7-472F-BCE4-D90DA186691A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{042131AC-DBF8-4234-9796-D26E047E2B21}"
+	ProjectSection(SolutionItems) = preProject
+		Api-SSLCert-Trust-Prompt-01-Initial.png = Api-SSLCert-Trust-Prompt-01-Initial.png
+		Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png = Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png
+		Api-SSLCert-Trust-Prompt-03-Timeout.PNG = Api-SSLCert-Trust-Prompt-03-Timeout.PNG
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
