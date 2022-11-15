@@ -29,6 +29,9 @@ During initial start of API project, the SSL require trust of certificate, and p
 | ![Api-SSLCert-Trust-Prompt-03-Timeout.png](Api-SSLCert-Trust-Prompt-03-Timeout.png){ width=50% }
 |:--:|
 
+# Android Platform
+
+1. [Connect to local web services from Android emulators and iOS simulators](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0)
 
 # References
 
