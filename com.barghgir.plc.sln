@@ -12,7 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{04
 		Api-SSLCert-Trust-Prompt-01-Initial.png = Api-SSLCert-Trust-Prompt-01-Initial.png
 		Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png = Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png
 		README.md = README.md
-		Api-SSLCert-Trust-Prompt-03-Timeout.png = Api-SSLCert-Trust-Prompt-03-Timeout.png
 	EndProjectSection
 EndProject
 Global
