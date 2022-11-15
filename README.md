@@ -1,37 +1,14 @@
-﻿# com.barghgir.plc.web
+﻿# Powerful Life Coaching Platform Solution
 
-A multiplatform application for servicing Powerful Life Coaching content.
+## Projects
 
-# com.barghgir.plc.api
-
-The Application Program Interface (API) that support back-end business data layer to provide data to features like Courses, and content/media.
+1. Clients are .NET MAUI work in project [com.barghgir.plc.web](https://github.com/abcox/com.barghgir.plc/tree/master/com.barghgir.plc.web)
+2. API is .NET 6 work in project [com.barghgir.plc.api](https://github.com/abcox/com.barghgir.plc/tree/master/com.barghgir.plc.api)
 
 ## Connect to localhost
 
 https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0
 
-## Trust SSL Certificate
-
-During initial start of API project, the SSL require trust of certificate, and prompts as follows:
-
-1. Answer 'Yes' to the dialog about trusting the certificate.
-
-| ![Api-SSLCert-Trust-Prompt-01-Initial.png](Api-SSLCert-Trust-Prompt-01-Initial.png){ width=50% }
-|:--:|
-
-2. Again, answer 'Yes' to the dialog about installing certificate.
-
-| ![Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png](Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png){ width=50% }
-|:--:|
-
-3. Answer 'Yes' to the dialog
-
-| ![Api-SSLCert-Trust-Prompt-03-Timeout.png](Api-SSLCert-Trust-Prompt-03-Timeout.png){ width=50% }
-|:--:|
-
-# Android Platform
-
-1. [Connect to local web services from Android emulators and iOS simulators](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0)
 
 # References
 
