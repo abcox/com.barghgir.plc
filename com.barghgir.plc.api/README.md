@@ -8,12 +8,12 @@ During initial start of API project, the SSL require trust of certificate, and p
 
 1. Answer 'Yes' to the dialog about trusting the certificate.
 
-<img src="https://github.com/abcox/com.barghgir.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-01-Initial.png" alt="Api-SSLCert-Trust-Prompt-01-Initial.png" width="500"/>
+<img src="https://github.com/abcox/com.barghgir.plc.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-01-Initial.png" alt="Api-SSLCert-Trust-Prompt-01-Initial.png" width="500"/>
 
 2. Again, answer 'Yes' to the dialog about installing certificate.
 
-<img src="https://github.com/abcox/com.barghgir.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" alt="Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" width="400"/>
+<img src="https://github.com/abcox/com.barghgir.plc.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" alt="Api-SSLCert-Trust-Prompt-02-Subsequent-Warn.png" width="400"/>
 
 3. Answer 'Yes' to the dialog
 
-<img src="https://github.com/abcox/com.barghgir.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-03-Timeout.png" alt="Api-SSLCert-Trust-Prompt-03-Timeout.png" width="500"/>
+<img src="https://github.com/abcox/com.barghgir.plc.api/blob/master/documentation/Api-SSLCert-Trust-Prompt-03-Timeout.png" alt="Api-SSLCert-Trust-Prompt-03-Timeout.png" width="500"/>
