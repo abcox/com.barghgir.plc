@@ -1,6 +1,6 @@
-﻿# Powerful Life Coaching Platform Clients
+﻿# Powerful Life Coaching Solution
 
-A multi-platform application universal (.NET MAUI) for servicing Powerful Life Coaching content.
+The Powerful Life Coaching solution offers deployment to multiple platforms (i.e. multi-platform application user interface (.NET MAUI) for servicing Powerful Life Coaching content.
 
 # Android Platform
 
