@@ -1,13 +1,17 @@
 ﻿# Powerful Life Coaching Platform Solution
 
+The Powerful Life Coaching Platform Solution is sponsored by [Solmaz Barghgir of Powerful Life Coaching](http://barghgir.com/)
+
 ## Projects
+
+There are 2 projects that deliver the solution. They are:
 
 1. Clients are .NET MAUI work in project [com.barghgir.plc.web](https://github.com/abcox/com.barghgir.plc/tree/master/com.barghgir.plc.web)
 2. API is .NET 6 work in project [com.barghgir.plc.api](https://github.com/abcox/com.barghgir.plc/tree/master/com.barghgir.plc.api)
 
-## Connect to localhost
+## Developer Notes
 
-https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0
+1. [Connect to local web services from Android emulators and iOS simulators](https://learn.microsoft.com/en-us/dotnet/maui/data-cloud/local-web-services?view=net-maui-7.0)
 
 
 # References
