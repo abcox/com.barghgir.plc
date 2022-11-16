@@ -1,7 +1,7 @@
 ﻿using com.barghgir.plc.web.Models;
 using com.barghgir.plc.web.ViewModels;
 
-namespace com.barghgir.plc.web;
+namespace com.barghgir.plc.web.Views;
 
 public partial class MainPage : ContentPage
 {
