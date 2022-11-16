@@ -11,11 +11,11 @@ namespace com.barghgir.plc.api.Controllers
         private static readonly string testDataFilePath = "data/courses.json";
         //private static readonly List<Course>? courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
 
-        private readonly ILogger<CourseController> _logger;
+        private readonly ILogger<CourseController> logger;
 
         public CourseController(ILogger<CourseController> logger)
         {
-            _logger = logger;
+            this.logger = logger;
         }
 
         [HttpGet]
@@ -26,7 +26,7 @@ namespace com.barghgir.plc.api.Controllers
 
             if (courses == null)
             {
-                Console.WriteLine($"Course data not found");
+                logger.LogWarning($"Course data not found");
                 return null;
             }
 
@@ -41,7 +41,7 @@ namespace com.barghgir.plc.api.Controllers
             
             if (courseList == null)
             {
-                Console.WriteLine("Course data not found");
+                logger.LogWarning($"Course data not found");
                 return null;
             }
 
@@ -49,7 +49,7 @@ namespace com.barghgir.plc.api.Controllers
 
             if (course == null)
             {
-                Console.WriteLine($"Course data not found for id {id}");
+                logger.LogWarning($"Course data not found for id {id}");
                 return null;
             }
 
