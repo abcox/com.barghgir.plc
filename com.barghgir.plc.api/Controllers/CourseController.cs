@@ -20,11 +20,17 @@ namespace com.barghgir.plc.api.Controllers
 
         [HttpGet]
         [Route("list", Name = "GetCourseList")]
-        public IEnumerable<Course> GetList()
+        public IEnumerable<Course>? GetList()
         {
             var courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
 
-            return courses ?? new List<Course> { };
+            if (courses == null)
+            {
+                Console.WriteLine($"Course data not found");
+                return null;
+            }
+
+            return courses;
         }
 
         [HttpGet]
@@ -33,11 +39,19 @@ namespace com.barghgir.plc.api.Controllers
         {
             var courseList = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
             
-            if (courseList == null) return null;
+            if (courseList == null)
+            {
+                Console.WriteLine("Course data not found");
+                return null;
+            }
 
             var course = courseList.FirstOrDefault(x => x.Id == id);
 
-            if (course == null) return null;
+            if (course == null)
+            {
+                Console.WriteLine($"Course data not found for id {id}");
+                return null;
+            }
 
             return new CourseDetail
             {
