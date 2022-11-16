@@ -11,16 +11,30 @@ using System.Threading.Tasks;
 
 namespace com.barghgir.plc.web.ViewModels
 {
-    public partial class CoursesViewModel : BaseViewModel
+    public partial class CourseListViewModel : BaseViewModel
     {
         CourseService courseService;
 
         public RangeEnabledObservableCollection<Course> Courses { get; } = new ();
 
-        public CoursesViewModel(CourseService courseService)
+        public CourseListViewModel(CourseService courseService)
         {
             Title = "Courses";
             this.courseService = courseService;
+            GetCoursesAsync();
+        }
+
+        [RelayCommand]
+        async Task GoToDetailAsync(Course course)
+        {
+            if (course is null) return;
+            
+            Console.WriteLine($"Going to course '{course.title}'...");
+
+            await Shell.Current.GoToAsync($"CourseDetailPage",true,new Dictionary<string, object>
+            {
+                {"Course", course}
+            });
         }
 
         [RelayCommand]

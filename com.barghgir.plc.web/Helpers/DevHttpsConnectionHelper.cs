@@ -66,7 +66,7 @@ namespace com.barghgir.plc.web.Helpers
         private Lazy<HttpClient> LazyHttpClient;
         public HttpClient HttpClient => LazyHttpClient.Value;
 
-        public HttpMessageHandler? GetPlatformMessageHandler()
+        public HttpMessageHandler GetPlatformMessageHandler()
         {
 #if WINDOWS
         return null;
@@ -93,7 +93,7 @@ namespace com.barghgir.plc.web.Helpers
 
         private sealed class CustomHostnameVerifier : Java.Lang.Object, Javax.Net.Ssl.IHostnameVerifier
         {
-            public bool Verify(string? hostname, Javax.Net.Ssl.ISSLSession? session)
+            public bool Verify(string hostname, Javax.Net.Ssl.ISSLSession session)
             {
                 return
                     Javax.Net.Ssl.HttpsURLConnection.DefaultHostnameVerifier.Verify(hostname, session)

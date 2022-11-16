@@ -4,7 +4,7 @@
              xmlns:material="clr-namespace:MauiIcons.Material;assembly=MauiIcons.Material"
              xmlns:model="clr-namespace:com.barghgir.plc.web.Models"
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
-             x:DataType="viewmodel:CoursesViewModel"
+             x:DataType="viewmodel:CourseListViewModel"
              Title="{Binding Title}"
              x:Class="com.barghgir.plc.web.MainPage">
     
@@ -21,12 +21,18 @@
                                Padding="0">
                             <Grid Padding="0">
                                 <Image Aspect="AspectFill"
-                                       Source="{Binding imageSourceUrl}"
+                                       Source="{Binding imageSource}"
                                        HeightRequest="200"
                                        WidthRequest="400"
                                        Opacity=".85">
                                 </Image>
-                                <Rectangle BackgroundColor="Black" Opacity=".25"/>
+                                <Rectangle BackgroundColor="Black" Opacity=".25">
+                                    <Rectangle.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
+                                            CommandParameter="{Binding .}"/>
+                                    </Rectangle.GestureRecognizers>
+                                </Rectangle>
                                 <Rectangle BackgroundColor="Black" Opacity=".25" Margin="15"/>
                                 <Grid RowDefinitions="Auto,Auto,*" Margin="30">
                                     <Label TextColor="White" Text="{Binding title}" FontSize="22" FontAttributes="Bold" Opacity=".7"></Label>
@@ -44,12 +50,12 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-        <Button Text="Get Courses"
+        <!--<Button Text="Get Courses"
                 Grid.Row="1"
                 Margin="10"
                 Command="{Binding GetCoursesCommand}"
                 IsEnabled="{Binding IsNotBusy}">
-        </Button>
+        </Button>-->
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
                            HorizontalOptions="FillAndExpand"
@@ -57,40 +63,4 @@
                            Grid.RowSpan="2"
                            Grid.ColumnSpan="2"/>
     </Grid>
-        
-    <!--<ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App UI"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>-->
-
 </ContentPage>

@@ -11,8 +11,7 @@ namespace com.barghgir.plc.web.Models
         public string title { get; set; }
         public string subtitle { get; set; }
         public string category { get; set; }
-        public int imageUrlId { get; set; }
         public string contentType { get; set; }
-        public string imageSourceUrl { get; set; }
+        public string imageSource { get; set; }
     }
 }

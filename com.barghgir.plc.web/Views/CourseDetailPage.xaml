@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="com.barghgir.plc.web.Views.CourseDetailPage"
+             xmlns:model="clr-namespace:com.barghgir.plc.web.Models"
+             xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
+             x:DataType="viewmodel:CourseDetailViewModel"
+             Title="{Binding Course.title}">
+    <VerticalStackLayout>
+        <Label 
+            Text="{Binding Course.subtitle}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
