@@ -12,19 +12,22 @@
             Aspect="AspectFill"/>
         <Frame
             CornerRadius="0"
-            BackgroundColor="Black"
+            BackgroundColor="Transparent"
             BorderColor="Transparent"
             Grid.Column="0"
             Grid.Row="0"
-            Opacity=".3"
             Padding="0">
-            <Label
-                FontSize="22"
-                FontAttributes="Bold"
-                Margin="10"
-                Text="{Binding Course.subtitle}"
-                TextColor="White"/>
         </Frame>
+        <Rectangle
+            BackgroundColor="Black"
+            Opacity=".3">
+        </Rectangle>
+        <Label
+            FontSize="22"
+            FontAttributes="Bold"
+            Margin="20"
+            Text="{Binding Course.subtitle}"
+            TextColor="White"/>
         <Frame
             BackgroundColor="Black"
             BorderColor="Transparent"
