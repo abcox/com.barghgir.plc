@@ -26,5 +26,25 @@ namespace com.barghgir.plc.api.Controllers
 
             return courses ?? new List<Course> { };
         }
+
+        [HttpGet]
+        [Route("{id}/detail", Name = "GetCourseDetail")]
+        public CourseDetail? GetDetail(int id)
+        {
+            var courseList = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
+            
+            if (courseList == null) return null;
+
+            var course = courseList.FirstOrDefault(x => x.Id == id);
+
+            if (course == null) return null;
+
+            return new CourseDetail
+            {
+                Id = id,
+                MediaTracks = DataHelper.GetDataFromFile<MediaTrack>("data/media.json").Result ?? new List<MediaTrack> { },
+                Title = course.Title
+            };
+        }
     }
 }

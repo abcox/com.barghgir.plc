@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "ULTIMATE EDGE",
     "subtitle": "The #1 Self-Improvement of...",
     "category": "Relationships",
@@ -8,6 +9,7 @@
     "imageSource": "https://picsum.photos/id/177/400/200"
   },
   {
+    "id": 2,
     "title": "TIME OF YOUR LIFE",
     "subtitle": "Eliminate Your \"To-Do\" List and Make T...",
     "category": "Productivity",
@@ -16,6 +18,7 @@
     "imageSource": "https://picsum.photos/id/829/400/200"
   },
   {
+    "id": 3,
     "title": "ULTIMATE RELATIONSHIP PROGRAM",
     "subtitle": "10 Days to Creating Lasting & Impactful Changes",
     "category": "Love & Relationships",
@@ -24,6 +27,7 @@
     "imageSource": "https://picsum.photos/id/380/400/200"
   },
   {
+    "id": 4,
     "title": "PERSONAL POWER",
     "subtitle": "30-Day Program for Unlimited Success",
     "category": "Peak Performance",
@@ -32,6 +36,7 @@
     "imageSource": "https://picsum.photos/id/741/400/200"
   },
   {
+    "id": 5,
     "title": "MASTERING INFLUENCE",
     "subtitle": "10 Steps to Master the Art of Enrolment",
     "category": "Career & Business",
@@ -40,6 +45,7 @@
     "imageSource": "https://picsum.photos/id/871/400/200"
   },
   {
+    "id": 6,
     "title": "CREATING LASTING CHANGE",
     "subtitle": "Learn the Strategies to...",
     "category": "Leadership",
@@ -48,6 +54,7 @@
     "imageSource": "https://picsum.photos/id/865/400/200"
   },
   {
+    "id": 7,
     "title": "THE BODY YOUR DESERVE",
     "subtitle": "Sustainable Weight Loss Strategies t...",
     "category": "Health & Energy",
@@ -56,6 +63,7 @@
     "imageSource": "https://picsum.photos/id/685/400/200"
   },
   {
+    "id": 8,
     "title": "MONEY MATTERS",
     "subtitle": "Adopt the Tactics to Thrive in the On...",
     "category": "Relationships",
