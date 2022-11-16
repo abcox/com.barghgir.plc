@@ -1,4 +1,4 @@
-﻿namespace com.barghgir.plc.api.Models
+﻿namespace com.barghgir.plc.data.Models
 {
     public class MediaTrack
     {

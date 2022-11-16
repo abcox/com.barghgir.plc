@@ -1,5 +1,5 @@
 using com.barghgir.plc.api.Helpers;
-using com.barghgir.plc.api.Models;
+using com.barghgir.plc.data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace com.barghgir.plc.api.Controllers
@@ -35,7 +35,7 @@ namespace com.barghgir.plc.api.Controllers
 
         [HttpGet]
         [Route("{id}/detail", Name = "GetCourseDetail")]
-        public CourseDetail? GetDetail(int id)
+        public Course? GetDetail(int id)
         {
             var courseList = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
             
@@ -53,12 +53,9 @@ namespace com.barghgir.plc.api.Controllers
                 return null;
             }
 
-            return new CourseDetail
-            {
-                Id = id,
-                MediaTracks = DataHelper.GetDataFromFile<MediaTrack>("data/media.json").Result ?? new List<MediaTrack> { },
-                Title = course.Title
-            };
+            course.MediaTracks = DataHelper.GetDataFromFile<MediaTrack>("data/media.json").Result ?? new List<MediaTrack> { };
+
+            return course;
         }
     }
 }

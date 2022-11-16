@@ -2,22 +2,22 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="com.barghgir.plc.web.Views.CourseDetailPage"
-             xmlns:model="clr-namespace:com.barghgir.plc.web.Models"
+             xmlns:model="clr-namespace:com.barghgir.plc.data.Models;assembly=com.barghgir.plc.data"
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
              x:DataType="viewmodel:CourseDetailViewModel"
-             Title="{Binding Course.title}">
+             Title="{Binding Course.Title}">
     <Grid RowDefinitions="*, Auto" BackgroundColor="Black">
         <Image
-            Source="{Binding Course.imageSource}"
+            Source="{Binding Course.ImageSource}"
             Aspect="AspectFill"/>
-        <Frame
+        <!--<Frame
             CornerRadius="0"
             BackgroundColor="Transparent"
             BorderColor="Transparent"
             Grid.Column="0"
             Grid.Row="0"
             Padding="0">
-        </Frame>
+        </Frame>-->
         <Rectangle
             BackgroundColor="Black"
             Opacity=".3">
@@ -26,7 +26,7 @@
             FontSize="22"
             FontAttributes="Bold"
             Margin="20"
-            Text="{Binding Course.subtitle}"
+            Text="{Binding Course.Subtitle}"
             TextColor="White"/>
         <Frame
             BackgroundColor="Black"

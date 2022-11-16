@@ -1,5 +1,5 @@
 ﻿using com.barghgir.plc.web.Helpers;
-using com.barghgir.plc.web.Models;
+using com.barghgir.plc.data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

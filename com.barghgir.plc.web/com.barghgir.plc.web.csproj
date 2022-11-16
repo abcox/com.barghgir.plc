@@ -54,6 +54,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\com.barghgir.plc.data\com.barghgir.plc.data.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Views\CourseDetailPage.xaml.cs">
 	    <DependentUpon>CourseDetailPage.xaml</DependentUpon>
 	  </Compile>

@@ -1,5 +1,5 @@
 ﻿using com.barghgir.plc.web.Helpers;
-using com.barghgir.plc.web.Models;
+using com.barghgir.plc.data.Models;
 using com.barghgir.plc.web.Services;
 using Microsoft.VisualBasic;
 using System;
@@ -29,7 +29,7 @@ namespace com.barghgir.plc.web.ViewModels
         {
             if (course is null) return;
             
-            Console.WriteLine($"Going to course '{course.title}'...");
+            Console.WriteLine($"Going to course '{course.Title}'...");
 
             await Shell.Current.GoToAsync($"CourseDetailPage",true,new Dictionary<string, object>
             {
@@ -54,7 +54,7 @@ namespace com.barghgir.plc.web.ViewModels
                     Courses.Clear();
 
                 Courses.CollectionChanged += (s, e) => Console.WriteLine("{0} changed", nameof(Courses));
-                Courses.InsertRange(courses);
+                Courses.InsertRange((IEnumerable<Course>)courses);
                 Console.WriteLine("{0}.Count: {1}", nameof(Courses), Courses.Count);
             }
             catch (Exception ex)
