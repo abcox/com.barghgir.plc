@@ -6,10 +6,40 @@
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
              x:DataType="viewmodel:CourseDetailViewModel"
              Title="{Binding Course.title}">
-    <VerticalStackLayout>
-        <Label 
-            Text="{Binding Course.subtitle}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid RowDefinitions="*, Auto" BackgroundColor="Black">
+        <Image
+            Source="{Binding Course.imageSource}"
+            Aspect="AspectFill"/>
+        <Frame
+            CornerRadius="0"
+            BackgroundColor="Black"
+            BorderColor="Transparent"
+            Grid.Column="0"
+            Grid.Row="0"
+            Opacity=".3"
+            Padding="0">
+            <Label
+                FontSize="22"
+                FontAttributes="Bold"
+                Margin="10"
+                Text="{Binding Course.subtitle}"
+                TextColor="White"/>
+        </Frame>
+        <Frame
+            BackgroundColor="Black"
+            BorderColor="Transparent"
+            CornerRadius="0"
+            Grid.Column="0"
+            Grid.Row="1"
+            HeightRequest="200"
+            Padding="0">
+            <Label
+                FontSize="22"
+                FontAttributes="Bold"
+                Margin="10"
+                Opacity=".7"
+                Text="Media Player"
+                TextColor="White"/>
+        </Frame>
+    </Grid>
 </ContentPage>
