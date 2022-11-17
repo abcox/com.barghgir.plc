@@ -29,6 +29,7 @@
                                        WidthRequest="400"
                                        Opacity=".85">
                                 </Image>
+                                <!-- TODO: resolve bug with render requiring cut & paste back this rectangle to have redraw render it opaque instead of black -->
                                 <Rectangle BackgroundColor="Black" Opacity=".25">
                                     <Rectangle.GestureRecognizers>
                                         <TapGestureRecognizer

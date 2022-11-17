@@ -18,21 +18,44 @@
             Grid.Row="0"
             Padding="0">
         </Frame>-->
+        <!-- TODO: resolve bug with render requiring cut & paste back this rectangle to have redraw render it opaque instead of black -->
         <Rectangle
             BackgroundColor="Black"
             Opacity=".3">
         </Rectangle>
-        <Label
-            FontSize="22"
-            FontAttributes="Bold"
-            Margin="20"
-            Text="{Binding Course.Subtitle}"
-            TextColor="White"/>
+        <Grid RowDefinitions="Auto,Auto"
+              Padding="0">
+            <Label FontSize="22"
+                   FontAttributes="Bold"
+                   Grid.Row="0"
+                   Margin="20"
+                   Text="{Binding Course.Subtitle}"
+                   TextColor="White"/>
+            <Frame HeightRequest="440"
+                   WidthRequest="380"
+                   Grid.Row="1"
+                   Padding="0"
+                   BackgroundColor="Transparent"
+                   BorderColor="Transparent">
+                <CollectionView BackgroundColor="Transparent"
+                            ItemsSource="{Binding Course.Content}"
+                            SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:Content">
+                            <Grid ColumnDefinitions="Auto,Auto,*" Margin="20">
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="22" FontAttributes="Bold"></Label>
+                                <Label Grid.Column="1" TextColor="White" Text="." FontSize="22" FontAttributes="Bold"></Label>
+                                <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Margin="20,0"></Label>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Frame>
+        </Grid>
         <Frame
             BackgroundColor="Black"
             BorderColor="Transparent"
             CornerRadius="0"
-            Grid.Column="0"
             Grid.Row="1"
             HeightRequest="200"
             Padding="0">

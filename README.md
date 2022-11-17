@@ -18,6 +18,3 @@ There are 2 projects that deliver the solution. They are:
 
 1. [Material Icons](https://github.com/AathifMahir/MauiIcons)
 2. [Converyor extension for VS 2022](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1448185.ConveyorbyKeyoti2022&ssr=false#overview)
-
-
-

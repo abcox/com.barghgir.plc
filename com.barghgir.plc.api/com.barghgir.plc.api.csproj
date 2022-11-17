@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Data\courses.json">
+    <Content Update="Data\Courses.json">
       <LogicalName>%(RecursiveDir)%(Filename)%(Extension)</LogicalName>
     </Content>
   </ItemGroup>

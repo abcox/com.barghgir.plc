@@ -7,5 +7,5 @@ public class Course
     public string? Subtitle { get; set; }
     public string? Category { get; set; }
     public string? ImageSource { get; set; } // URL
-    public List<MediaTrack>? MediaTracks { get; set; }
+    public List<Content>? Content { get; set; }
 }

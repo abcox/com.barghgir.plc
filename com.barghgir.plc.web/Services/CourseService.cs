@@ -15,6 +15,7 @@ namespace com.barghgir.plc.web.Services
         //HttpClient httpClient;
 
         List<Course> courseList = new();
+        Course courseDetail = new();
 
         public CourseService()
         {
@@ -24,7 +25,38 @@ namespace com.barghgir.plc.web.Services
         public static string BaseAddress =
             DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.2.53:45455" /* "http://localhost:5260" "https://10.0.2.2:45455" "https://192.168.2.53:45455" "https://10.0.2.2:5001" */ : "https://localhost:7132";
 
-        public static string CourseListUrl = $"{BaseAddress}/course/list/";
+        public static string CourseListUrl = $"{BaseAddress}/course/list";
+        public static string CourseDetailUrl = $"{BaseAddress}/course/{{id}}/detail";
+
+        public static HttpClient GetHttpClient()
+        {
+            HttpClient httpClient;
+#if DEBUG
+            //HttpsClientHandlerService handler = new HttpsClientHandlerService();
+            //HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
+
+            //HttpClient httpClient = new DevHttpsConnectionHelper(7132).HttpClient;
+            var handler = new HttpsClientHandlerService();
+            httpClient = new HttpClient(handler.GetPlatformMessageHandler());
+
+#else
+            httpClient = new HttpClient();
+#endif
+            return httpClient;
+        }
+
+        public async Task<Course> GetCourseDetailAsync(int id)
+        {
+            var response = await GetHttpClient().GetAsync($"{BaseAddress}/course/{id}/detail");
+
+            if (response.IsSuccessStatusCode)
+            {
+                courseDetail = await response.Content.ReadFromJsonAsync<Course>();
+            }
+            // TODO: figure out how to send notifications to present user with feedback like "successful" or "error"
+
+            return courseDetail;
+        }
 
         public async Task<List<Course>> GetCourses()
         {
@@ -36,18 +68,7 @@ namespace com.barghgir.plc.web.Services
                 {
                     Console.WriteLine($"Getting course list from url {url}");
 
-#if DEBUG
-                    //HttpsClientHandlerService handler = new HttpsClientHandlerService();
-                    //HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
-
-                    //HttpClient httpClient = new DevHttpsConnectionHelper(7132).HttpClient;
-                    var handler = new HttpsClientHandlerService();
-                    HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
-
-#else
-                    HttpClient httpClient = new HttpClient();
-#endif
-                    var response = await httpClient.GetAsync(url);
+                    var response = await GetHttpClient().GetAsync(url);
 
                     if (response.IsSuccessStatusCode)
                     {

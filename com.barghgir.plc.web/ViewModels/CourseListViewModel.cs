@@ -21,7 +21,8 @@ namespace com.barghgir.plc.web.ViewModels
         {
             Title = "Courses";
             this.courseService = courseService;
-            GetCoursesAsync();
+
+            Task.Run(() => this.GetCoursesAsync()).Wait();
         }
 
         [RelayCommand]
