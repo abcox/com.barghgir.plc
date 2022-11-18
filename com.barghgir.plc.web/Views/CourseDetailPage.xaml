@@ -42,10 +42,13 @@
                             SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Content">
-                            <Grid ColumnDefinitions="Auto,Auto,*" Margin="20">
+                            <Grid ColumnDefinitions="Auto,Auto,*"
+                                  RowDefinitions="*,*"
+                                  Margin="20">
                                 <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="22" FontAttributes="Bold"></Label>
                                 <Label Grid.Column="1" TextColor="White" Text="." FontSize="22" FontAttributes="Bold"></Label>
                                 <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Margin="20,0"></Label>
+                                <Label Grid.Row="1" Grid.ColumnSpan="3" TextColor="White" Text="{Binding DurationSeconds}" FontSize="22" FontAttributes="Bold" Margin="20,0"></Label>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
