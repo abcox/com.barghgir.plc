@@ -17,3 +17,6 @@ During initial start of API project, the SSL require trust of certificate, and p
 3. Answer 'Yes' to the dialog
 
 <img src="https://github.com/abcox/com.barghgir.plc/blob/master/com.barghgir.plc.api/Documentation/Api-SSLCert-Trust-Prompt-03-Timeout.png" alt="Api-SSLCert-Trust-Prompt-03-Timeout.png" width="500"/>
+
+# References
+1. Publish to azure resource [com-barghgir-plc-api](https://portal.azure.com/#@Vorba.onmicrosoft.com/resource/subscriptions/236217f7-0ad4-4dd6-8553-dc4b574fd2c5/resourceGroups/cca-cc-rg-01/providers/Microsoft.Web/sites/com-barghgir-plc-api/appServices)
