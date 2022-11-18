@@ -49,6 +49,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Raw\configuration.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="AathifMahir.Maui.MauiIcons.Material" Version="0.1.1" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	</ItemGroup>

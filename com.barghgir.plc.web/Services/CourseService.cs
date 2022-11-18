@@ -22,11 +22,10 @@ namespace com.barghgir.plc.web.Services
             //httpClient = new HttpClient();
         }
 
-        public static string BaseAddress =
-            DeviceInfo.Platform == DevicePlatform.Android ? "https://192.168.2.53:45455" /* "http://localhost:5260" "https://10.0.2.2:45455" "https://192.168.2.53:45455" "https://10.0.2.2:5001" */ : "https://localhost:7132";
+        public static async Task<string> BaseAddress() => (await ConfigurationService.GetEnvironment())?.Options?.BaseServiceEndpoint;
 
-        public static string CourseListUrl = $"{BaseAddress}/course/list";
-        public static string CourseDetailUrl = $"{BaseAddress}/course/{{id}}/detail";
+        public static async Task<string> CourseListUrl() => $"{await BaseAddress()}/course/list";
+        public static async Task<string> CourseDetailUrl() => $"{await BaseAddress()}/course/{{id}}/detail";
 
         public static HttpClient GetHttpClient()
         {
@@ -47,7 +46,7 @@ namespace com.barghgir.plc.web.Services
 
         public async Task<Course> GetCourseDetailAsync(int id)
         {
-            var response = await GetHttpClient().GetAsync($"{BaseAddress}/course/{id}/detail");
+            var response = await GetHttpClient().GetAsync($"{await BaseAddress()}/course/{id}/detail");
 
             if (response.IsSuccessStatusCode)
             {
@@ -60,7 +59,7 @@ namespace com.barghgir.plc.web.Services
 
         public async Task<List<Course>> GetCourses()
         {
-            var url = CourseListUrl; // "https://10.0.2.2:5001/course/list";
+            var url = await CourseListUrl(); // "https://10.0.2.2:5001/course/list";
             var testJsonFilename = "courses.json";
             try
             {

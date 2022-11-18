@@ -1,0 +1,17 @@
+{
+  "SelectedEnvironmentName": "local",
+  "Environments": [
+    {
+      "Name": "local",
+      "Options": {
+        "BaseServiceEndpoint": "https://192.168.2.53:45455"
+      }
+    },
+    {
+      "Name": "release",
+      "Options": {
+        "BaseServiceEndpoint": "https://com-barghgir-plc-api.azurewebsites.net"
+      }
+    }
+  ]
+}
