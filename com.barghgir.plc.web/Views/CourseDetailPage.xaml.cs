@@ -15,8 +15,8 @@ public partial class CourseDetailPage : ContentPage
     {
         base.OnNavigatedTo(args);
 
-        var viewModel = (CourseDetailViewModel)BindingContext;
-        if (viewModel.GetCourseDetailCommand.CanExecute(viewModel.course.Id))
-            viewModel.GetCourseDetailCommand.Execute(viewModel.course.Id);
+        //var viewModel = (CourseDetailViewModel)BindingContext;
+        //if (viewModel.GetCourseDetailCommand.CanExecute(null))
+        //    viewModel.GetCourseDetailCommand.Execute(null);
     }
 }

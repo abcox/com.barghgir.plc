@@ -21,7 +21,7 @@ public static class MauiProgram
 
 		// Course
         builder.Services.AddTransient<CourseDetailPage>();
-        builder.Services.AddSingleton<CourseDetailViewModel>();
+        builder.Services.AddTransient<CourseDetailViewModel>();
         builder.Services.AddSingleton<CourseListViewModel>();
         builder.Services.AddSingleton<CourseService>();
 

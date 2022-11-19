@@ -19,10 +19,16 @@ public partial class CourseDetailViewModel : BaseViewModel
     }
 
     [ObservableProperty]
-    public Course course;
+    [NotifyCanExecuteChangedFor(nameof(GetCourseDetailCommand))]
+    Course course;
+
+    partial void OnCourseChanged(Course value)
+    {
+        Task.Run(() => this.GetCourseDetailAsync()).Wait();
+    }
 
     [RelayCommand]
-    async Task GetCourseDetailAsync(int id)
+    public async Task GetCourseDetailAsync()
     {
         if (GetCourseDetailCommand.IsRunning) return;
 
@@ -30,7 +36,7 @@ public partial class CourseDetailViewModel : BaseViewModel
         {
             IsBusy = true;
 
-            course = await courseService.GetCourseDetailAsync(id);
+            course = await courseService.GetCourseDetailAsync(course.Id);
         }
         catch (Exception ex)
         {

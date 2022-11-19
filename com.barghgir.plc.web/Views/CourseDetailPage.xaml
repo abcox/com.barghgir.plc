@@ -6,7 +6,7 @@
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
              x:DataType="viewmodel:CourseDetailViewModel"
              Title="{Binding Course.Title}">
-    <Grid RowDefinitions="*, Auto" BackgroundColor="Black">
+    <Grid RowDefinitions="*, Auto">
         <Image
             Source="{Binding Course.ImageSource}"
             Aspect="AspectFill"/>
@@ -19,12 +19,14 @@
             Padding="0">
         </Frame>-->
         <!-- TODO: resolve bug with render requiring cut & paste back this rectangle to have redraw render it opaque instead of black -->
-        <Rectangle
+        <Border
             BackgroundColor="Black"
-            Opacity=".3">
-        </Rectangle>
+            Opacity=".2"
+            StrokeThickness="10">
+        </Border>
         <Grid RowDefinitions="Auto,Auto"
-              Padding="0">
+              Padding="0"
+                   Margin="20">
             <Label FontSize="22"
                    FontAttributes="Bold"
                    Grid.Row="0"
@@ -34,7 +36,7 @@
             <Frame HeightRequest="440"
                    WidthRequest="380"
                    Grid.Row="1"
-                   Padding="0"
+                   Padding="20,0,0,30"
                    BackgroundColor="Transparent"
                    BorderColor="Transparent">
                 <CollectionView BackgroundColor="Transparent"
@@ -43,12 +45,12 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Content">
                             <Grid ColumnDefinitions="Auto,Auto,*"
-                                  RowDefinitions="*,*"
+                                  RowDefinitions="*,Auto"
                                   Margin="20">
-                                <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="22" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="1" TextColor="White" Text="." FontSize="22" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Margin="20,0"></Label>
-                                <Label Grid.Row="1" Grid.ColumnSpan="3" TextColor="White" Text="{Binding DurationSeconds}" FontSize="22" FontAttributes="Bold" Margin="20,0"></Label>
+                                <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"></Label>
+                                <Label Grid.Column="1" TextColor="White" Text="." FontSize="18" FontAttributes="Bold"></Label>
+                                <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="18" FontAttributes="Bold" Margin="10,0"></Label>
+                                <Label Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" TextColor="LightGray" Text="{Binding DurationSeconds}" FontSize="14" FontAttributes="Bold" Margin="20,0"></Label>
                             </Grid>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -57,7 +59,7 @@
         </Grid>
         <Frame
             BackgroundColor="Black"
-            BorderColor="Transparent"
+            BorderColor="Black"
             CornerRadius="0"
             Grid.Row="1"
             HeightRequest="200"
