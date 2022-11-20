@@ -10,47 +10,48 @@
              x:Class="com.barghgir.plc.web.Views.MainPage">
     
     <Grid
+        BackgroundColor="Black"
         ColumnDefinitions="*,*"
-        RowDefinitions="*,Auto">
+        RowDefinitions="*,Auto"
+        Padding="0,10,0,10">
         <CollectionView
-            BackgroundColor="Gray"
             Grid.ColumnSpan="2"
             ItemsSource="{Binding Courses}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Course">
-                    <Grid Padding="5">
-                        <Frame HeightRequest="200"
+                    <Grid HeightRequest="260">
+                        <!--<Frame HeightRequest="200"
                                WidthRequest="380"
-                               Padding="0">
-                            <Grid Padding="0">
-                                <Image Aspect="AspectFill"
-                                       Source="{Binding ImageSource}"
-                                       HeightRequest="200"
-                                       WidthRequest="400"
-                                       Opacity=".85">
-                                </Image>
-                                <!-- TODO: resolve bug with render requiring cut & paste back this rectangle to have redraw render it opaque instead of black -->
-                                <Border BackgroundColor="Black" Opacity=".15" StrokeThickness="0"/>
-                                <Border BackgroundColor="Black" Opacity=".25" Margin="15" StrokeThickness="0">
-                                    <Border.GestureRecognizers>
-                                        <TapGestureRecognizer
+                               Padding="0"ket
+                                Margin="0,0,0,10">-->
+                        <Border BackgroundColor="Transparent" StrokeThickness="0" Margin="10,0,10,10">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="2"/>
+                                </Border.StrokeShape>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer
                                             Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
                                             CommandParameter="{Binding .}"/>
-                                    </Border.GestureRecognizers>
-                                </Border>
+                                </Border.GestureRecognizers>
+                                <Grid Padding="0">
+                                <Image Aspect="AspectFill"
+                                       Source="{Binding ImageUrl}"
+                                       WidthRequest="400">
+                                </Image>
+                                <Border BackgroundColor="Black" Opacity=".3" StrokeThickness="0"/>
                                 <Grid RowDefinitions="Auto,Auto,*" Margin="30">
-                                    <Label TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Opacity=".7"></Label>
-                                    <Label Grid.Row="1" TextColor="White" Text="{Binding Subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity=".7"></Label>
+                                    <Label TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Opacity="1"></Label>
+                                    <Label Grid.Row="1" TextColor="White" Text="{Binding Subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity="1"></Label>
                                     <Grid Grid.Row="2" ColumnDefinitions="*,*"
                                           RowDefinitions="*,*">
                                         <!--<material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity=".7"/>-->
-                                        <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity=".7" IconSize="20"/>
+                                        <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity="1" IconSize="20"/>
                                         <!--<Image Aspect="Center" Source="{material:Icon Icon=Headset}"/>-->
                                     </Grid>
                                 </Grid>
                             </Grid>
-                        </Frame>
+                            </Border>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

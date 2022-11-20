@@ -6,6 +6,7 @@ public class Course
     public string? Title { get; set; }
     public string? Subtitle { get; set; }
     public string? Category { get; set; }
-    public string? ImageSource { get; set; } // URL
+    public int? ImageId { get; set; }
+    public string? ImageUrl { get; set; }
     public List<Content>? Content { get; set; }
 }

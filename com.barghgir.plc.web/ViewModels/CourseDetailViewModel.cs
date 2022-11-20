@@ -50,5 +50,4 @@ public partial class CourseDetailViewModel : BaseViewModel
             IsBusy = false;
         }
     }
-
 }

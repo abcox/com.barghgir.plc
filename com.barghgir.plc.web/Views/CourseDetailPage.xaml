@@ -8,7 +8,7 @@
              Title="{Binding Course.Title}">
     <Grid RowDefinitions="*, Auto">
         <Image
-            Source="{Binding Course.ImageSource}"
+            Source="{Binding Course.ImageUrl}"
             Aspect="AspectFill"/>
         <!--<Frame
             CornerRadius="0"
@@ -21,22 +21,22 @@
         <!-- TODO: resolve bug with render requiring cut & paste back this rectangle to have redraw render it opaque instead of black -->
         <Border
             BackgroundColor="Black"
-            Opacity=".2"
-            StrokeThickness="10">
+            Opacity=".3"
+            StrokeThickness="0">
         </Border>
         <Grid RowDefinitions="Auto,Auto"
               Padding="0"
-                   Margin="20">
+                   Margin="10,10,0,0">
             <Label FontSize="22"
                    FontAttributes="Bold"
                    Grid.Row="0"
-                   Margin="20"
+                   Margin="10"
                    Text="{Binding Course.Subtitle}"
                    TextColor="White"/>
             <Frame HeightRequest="440"
                    WidthRequest="380"
                    Grid.Row="1"
-                   Padding="20,0,0,30"
+                   Padding="10,10,0,0"
                    BackgroundColor="Transparent"
                    BorderColor="Transparent">
                 <CollectionView BackgroundColor="Transparent"
@@ -46,7 +46,7 @@
                         <DataTemplate x:DataType="model:Content">
                             <Grid ColumnDefinitions="Auto,Auto,*"
                                   RowDefinitions="*,Auto"
-                                  Margin="20">
+                                  Margin="10,15,10,15">
                                 <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"></Label>
                                 <Label Grid.Column="1" TextColor="White" Text="." FontSize="18" FontAttributes="Bold"></Label>
                                 <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="18" FontAttributes="Bold" Margin="10,0"></Label>

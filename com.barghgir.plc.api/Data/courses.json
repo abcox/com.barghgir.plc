@@ -4,71 +4,64 @@
     "title": "ULTIMATE EDGE",
     "subtitle": "The #1 Self-Improvement of...",
     "category": "Relationships",
-    "imageUrlId": 177,
-    "contentType": "video",
-    "imageSource": "https://picsum.photos/id/177/400/200"
+    "imageId": 177,
+    "contentType": "video"
+
   },
   {
     "id": 2,
     "title": "TIME OF YOUR LIFE",
     "subtitle": "Eliminate Your \"To-Do\" List and Make T...",
     "category": "Productivity",
-    "imageUrlId": 829,
-    "contentType": "video",
-    "imageSource": "https://picsum.photos/id/829/400/200"
+    "imageId": 829,
+    "contentType": "video"
   },
   {
     "id": 3,
     "title": "ULTIMATE RELATIONSHIP PROGRAM",
     "subtitle": "10 Days to Creating Lasting & Impactful Changes",
     "category": "Love & Relationships",
-    "imageUrlId": 380,
-    "contentType": "video",
-    "imageSource": "https://picsum.photos/id/380/400/200"
+    "imageId": 380,
+    "contentType": "video"
   },
   {
     "id": 4,
     "title": "PERSONAL POWER",
     "subtitle": "30-Day Program for Unlimited Success",
     "category": "Peak Performance",
-    "imageUrlId": 741,
-    "contentType": "audio",
-    "imageSource": "https://picsum.photos/id/741/400/200"
+    "imageId": 741,
+    "contentType": "audio"
   },
   {
     "id": 5,
     "title": "MASTERING INFLUENCE",
     "subtitle": "10 Steps to Master the Art of Enrolment",
     "category": "Career & Business",
-    "imageUrlId": 871,
-    "contentType": "audio",
-    "imageSource": "https://picsum.photos/id/871/400/200"
+    "imageId": 871,
+    "contentType": "audio"
   },
   {
     "id": 6,
     "title": "CREATING LASTING CHANGE",
     "subtitle": "Learn the Strategies to...",
     "category": "Leadership",
-    "imageUrlId": 865,
-    "contentType": "audio",
-    "imageSource": "https://picsum.photos/id/865/400/200"
+    "imageId": 865,
+    "contentType": "audio"
   },
   {
     "id": 7,
     "title": "THE BODY YOUR DESERVE",
     "subtitle": "Sustainable Weight Loss Strategies t...",
     "category": "Health & Energy",
-    "imageUrlId": 685,
-    "contentType": "audio",
-    "imageSource": "https://picsum.photos/id/685/400/200"
+    "imageId": 685,
+    "contentType": "audio"
   },
   {
     "id": 8,
     "title": "MONEY MATTERS",
     "subtitle": "Adopt the Tactics to Thrive in the On...",
     "category": "Relationships",
-    "imageUrlId": 866,
-    "contentType": "audio",
-    "imageSource": "https://picsum.photos/id/866/400/200"
+    "imageId": 866,
+    "contentType": "audio"
   }
 ]

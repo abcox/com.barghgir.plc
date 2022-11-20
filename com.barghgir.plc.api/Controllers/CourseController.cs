@@ -1,6 +1,8 @@
+using com.barghgir.plc.api.Data;
 using com.barghgir.plc.api.Helpers;
 using com.barghgir.plc.data.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 
 namespace com.barghgir.plc.api.Controllers
@@ -13,21 +15,25 @@ namespace com.barghgir.plc.api.Controllers
         //private static readonly List<Course>? courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
 
         private readonly ILogger<CourseController> logger;
+        private readonly ApiOptions options;
 
-        public CourseController(ILogger<CourseController> logger)
+        public CourseController(ILogger<CourseController> logger, IOptions<ApiOptions> options)
         {
             this.logger = logger;
+
+            if (options?.Value != null) { logger.LogWarning("Api config failure"); }
+            this.options = options?.Value ?? new ApiOptions { };
         }
 
         [HttpGet]
         [Route("list", Name = "GetCourseList")]
         public IEnumerable<Course>? GetList()
         {
-            IEnumerable < Course >? courses = null;
+            IEnumerable<Course>? response = null;
 
             try
             {
-                courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
+                var courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
 
                 // TODO:  filter/omit courses with no content (and make a GetCourseListForAdmin that brings them all back (implement filters/search)
 
@@ -36,12 +42,22 @@ namespace com.barghgir.plc.api.Controllers
                     logger.LogWarning($"Course data not found");
                     return null;
                 }
+                response = courses.Select(x => new Course
+                {
+                    Id = x.Id,
+                    ImageId = x.ImageId,
+                    Category = x.Category,
+                    Content = x.Content,
+                    ImageUrl = $"{options.Images.SourceUrl}/{x.ImageId}/{options.Images.ListBackgroundSize.WidthPx}/{options.Images.ListBackgroundSize.HeightPx}",
+                    Subtitle = x.Subtitle,
+                    Title = x.Title,
+                })?.AsEnumerable();
             }
             catch (Exception ex)
             {
                 logger.LogError($"Something exceptional happened. {ex.Message}");
             }
-            return courses;
+            return response;
         }
 
         [HttpGet]
@@ -96,6 +112,7 @@ namespace com.barghgir.plc.api.Controllers
 
                 var i = 1;
                 course.Content.ForEach(x => x.Index = i++);
+                course.ImageUrl = $"{options.Images.SourceUrl}/{course.ImageId}/{options.Images.DetailBackgroundSize.WidthPx}/{options.Images.DetailBackgroundSize.HeightPx}";
             }
             catch ( Exception ex )
             {
