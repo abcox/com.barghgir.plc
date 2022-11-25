@@ -3,59 +3,145 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:material="clr-namespace:MauiIcons.Material;assembly=MauiIcons.Material"
+             xmlns:helpers="clr-namespace:com.barghgir.plc.web.Helpers"
              xmlns:model="clr-namespace:com.barghgir.plc.data.Models;assembly=com.barghgir.plc.data"
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
+             xmlns:controls="clr-namespace:com.barghgir.plc.web.Controls"
              x:DataType="viewmodel:CourseListViewModel"
-             Title="{Binding Title}"
+             Title=""
              x:Class="com.barghgir.plc.web.Views.MainPage">
-    
+    <Shell.TitleView>
+        <StackLayout Margin="0,0,0,0"
+                     Orientation="Horizontal"
+                     WidthRequest="400">
+            <Label Text="{Binding Title}"
+                   TextColor="White"
+                   FontSize="Title"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   Margin="10,0,50,0"
+                   HorizontalTextAlignment="Start"/>
+            <!--<Button TextColor="Red" Text="Manage" HeightRequest="50" WidthRequest="150" HorizontalOptions="End"/>-->
+            <ImageButton IsVisible="{Binding IsAdmin}"
+                         Source="{DynamicResource settings}"
+                         Command="{Binding GoToAdminCommand}"
+                         MaximumHeightRequest="30"
+                         MaximumWidthRequest="30"/>
+            <Button Command="{Binding GoToSignInCommand}"
+                    Text="{Binding SignInOutText}"
+                    TextColor="White"
+                    FontSize="Small"
+                    FontAttributes="Bold"
+                    Margin="50,5,20,5"
+                    BorderWidth="1"
+                    BorderColor="White"
+                    CornerRadius="20"
+                    Padding="10">
+            </Button>
+            <ImageButton Source="{DynamicResource autorenew}"
+                         Command="{Binding GetCoursesCommand}"
+                         MaximumHeightRequest="30"
+                         MaximumWidthRequest="30"/>
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- https://fonts.google.com/icons?selected=Material+Icons -->
+            <x:String x:Key="autorenew">baseline_autorenew_white_24dp.png</x:String>
+            <x:String x:Key="settings">baseline_settings_white_24dp.png</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <!-- todo: connect this to state about whether user is authenticated (state?) -->
+        <!-- https://stackoverflow.com/questions/73145149/change-toolbaritem-text-icon-parameters -->
+        <!--<ToolbarItem
+            Command="{Binding GoToSignInCommand}"
+            Text="{Binding SignInOutText}"/>-->
+        <!--<controls:InvisableToolbarItem
+            Command="{Binding GoToSignInCommand}"
+            Text="{Binding SignInOutText}"
+            IsVisible="{Binding ShowSignIn}"/>-->
+        <!--<ToolbarItem
+            Text="Configure"
+            IconImageSource="{DynamicResource settings}"/>-->
+        <!--<controls:HideableToolbarItem
+            x:Name="AdminToolbarItem"
+            Command="{Binding GoToAdminCommand}"
+            Text="Configure"
+            IsVisible="{Binding IsAdmin}"
+            IconImageSource="{DynamicResource settings}"/>-->
+        <!--<ToolbarItem
+            Text="Refresh"
+            Command="{Binding GetCoursesCommand}"
+            IconImageSource="{DynamicResource autorenew}"/>-->
+        <!--<controls:InvisableToolbarItem
+            Command="{Binding GoToSignInCommand}"
+            Text="Sign-Out"
+            IsVisible="{Binding IsSignedIn}">
+        </controls:InvisableToolbarItem>-->
+    </ContentPage.ToolbarItems>
     <Grid
         BackgroundColor="Black"
         ColumnDefinitions="*,*"
         RowDefinitions="*,Auto"
         Padding="0,10,0,10">
-        <CollectionView
+        <!--<Label IsVisible="{Binding IsAdmin}" Grid.Row="1" Text="Admin" TextColor="White"></Label>-->
+        <RefreshView
             Grid.ColumnSpan="2"
-            ItemsSource="{Binding Courses}"
-            SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="model:Course">
-                    <Grid HeightRequest="260">
-                        <!--<Frame HeightRequest="200"
-                               WidthRequest="380"
-                               Padding="0"ket
-                                Margin="0,0,0,10">-->
-                        <Border BackgroundColor="Transparent" StrokeThickness="0" Margin="10,0,10,10">
+            Command="{Binding GetCoursesCommand}"
+            IsRefreshing="{Binding IsRefreshing}">
+            <CollectionView
+                Grid.ColumnSpan="2"
+                ItemsSource="{Binding Courses}"
+                SelectionMode="None">
+                <!--IsGrouped="true" ref: https://youtu.be/DuNLR_NJv8U?t=12589 -->
+                <CollectionView.EmptyView>
+                    <StackLayout Padding="100">
+                        <Image
+                            HorizontalOptions="CenterAndExpand"
+                            Source="nodata.png"
+                            VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Course">
+                        <Grid HeightRequest="260">
+                            <!--<Frame HeightRequest="200"
+                                   WidthRequest="380"
+                                   Padding="0"ket
+                                    Margin="0,0,0,10">-->
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" Margin="10,0,10,10">
                                 <Border.StrokeShape>
                                     <RoundRectangle CornerRadius="2"/>
                                 </Border.StrokeShape>
                                 <Border.GestureRecognizers>
                                     <TapGestureRecognizer
-                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
-                                            CommandParameter="{Binding .}"/>
+                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
+                                                CommandParameter="{Binding .}"/>
                                 </Border.GestureRecognizers>
                                 <Grid Padding="0">
-                                <Image Aspect="AspectFill"
-                                       Source="{Binding ImageUrl}"
-                                       WidthRequest="400">
-                                </Image>
-                                <Border BackgroundColor="Black" Opacity=".3" StrokeThickness="0"/>
-                                <Grid RowDefinitions="Auto,Auto,*" Margin="30">
-                                    <Label TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Opacity="1"></Label>
-                                    <Label Grid.Row="1" TextColor="White" Text="{Binding Subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity="1"></Label>
-                                    <Grid Grid.Row="2" ColumnDefinitions="*,*"
-                                          RowDefinitions="*,*">
-                                        <!--<material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity=".7"/>-->
-                                        <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity="1" IconSize="20"/>
-                                        <!--<Image Aspect="Center" Source="{material:Icon Icon=Headset}"/>-->
+                                    <Image Aspect="AspectFill"
+                                           Source="{Binding ImageUrl}"
+                                           WidthRequest="400">
+                                    </Image>
+                                    <Border BackgroundColor="Black" Opacity=".3" StrokeThickness="0"/>
+                                    <Grid RowDefinitions="Auto,Auto,*" Margin="30">
+                                        <Label TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Opacity="1"></Label>
+                                        <Label Grid.Row="1" TextColor="White" Text="{Binding Subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity="1"></Label>
+                                        <Grid Grid.Row="2" ColumnDefinitions="*,*"
+                                              RowDefinitions="*,*">
+                                            <!--<material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity=".7"/>-->
+                                            <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity="1" IconSize="20"/>
+                                            <!--<Image Aspect="Center" Source="{material:Icon Icon=Headset}"/>-->
+                                        </Grid>
                                     </Grid>
                                 </Grid>
-                            </Grid>
                             </Border>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
         <!--<Button Text="Get Courses"
                 Grid.Row="1"
                 Margin="10"

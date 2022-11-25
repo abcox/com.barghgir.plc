@@ -13,7 +13,10 @@ public partial class CourseDetailViewModel : BaseViewModel
 {
     private readonly CourseService courseService;
 
-    public CourseDetailViewModel(CourseService courseService)
+    public CourseDetailViewModel(
+        CourseService courseService,
+        IConnectivity connectivity
+        ): base(connectivity)
     {
         this.courseService = courseService;
     }

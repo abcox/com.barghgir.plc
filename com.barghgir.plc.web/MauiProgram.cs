@@ -16,17 +16,27 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			})
+                fonts.AddFont(filename: "MaterialIcons-Regular.ttf", alias: "MaterialIcons");
+            })
 			.UseMaterialMauiIcons();
 
 		// Course
         builder.Services.AddTransient<CourseDetailPage>();
         builder.Services.AddTransient<CourseDetailViewModel>();
-        builder.Services.AddSingleton<CourseListViewModel>();
+        builder.Services.AddSingleton<CourseListViewModel>(); // Main page
+
         builder.Services.AddSingleton<CourseService>();
+        builder.Services.AddSingleton<MemberService>(); // has SignIn
+
+        builder.Services.AddDataProtection();
+		builder.Services.AddSingleton<DataProtectionService>();
 
         // General
         builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<SignInPage>();
+        builder.Services.AddSingleton<SignInViewModel>();
+
+		builder.Services.AddSingleton(Connectivity.Current);
 
         return builder.Build();
 	}

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="fd7aa7ee-fcf4-4223-a96a-323d91615444" ChangeDateTime="11/21/2022 14:28:16">
+    <Property Name="ElementName" Value="[dbo].[Member].[Locked]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LockDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b71bf2cf-f5fe-4e95-af47-4f79628e5155" ChangeDateTime="11/21/2022 14:28:24">
+    <Property Name="ElementName" Value="[dbo].[Member].[LockDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LockedOn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e8010451-95f6-4e7d-ab79-2f45cf45fd1c" ChangeDateTime="11/21/2022 14:29:59">
+    <Property Name="ElementName" Value="[dbo].[Member].[LockedOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedOn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="25662360-244f-4f5b-a5b9-96ab2365fd4a" ChangeDateTime="11/21/2022 14:30:46">
+    <Property Name="ElementName" Value="[dbo].[Member].[LocCreatedOnedOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedOn" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1aa74e51-2b3f-4282-a4bd-45a73f54cd38" ChangeDateTime="11/21/2022 16:16:06">
+    <Property Name="ElementName" Value="[dbo].[Member].[CreatedOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="VerifyDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d80d7376-aea0-410f-9e36-2fdf3a15e0be" ChangeDateTime="11/21/2022 16:16:28">
+    <Property Name="ElementName" Value="[dbo].[Member].[LockedOn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LockDate" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8ac80dd3-55a1-4fb6-acfc-184e21dd0abf" ChangeDateTime="11/21/2022 16:17:36">
+    <Property Name="ElementName" Value="[dbo].[Member].[LastSignIn]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Member]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastSignInDate" />
+  </Operation>
+</Operations>

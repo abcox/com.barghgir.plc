@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="com.barghgir.plc.web.Views.SignInPage"
+             xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
+             x:DataType="viewmodel:SignInViewModel"
+             Shell.PresentationMode="ModalAnimated"
+             Title="SignInPage">
+    <Grid Padding="0">
+        <Image Aspect="AspectFill"
+            Source="https://picsum.photos/id/177/400/820"
+            WidthRequest="400">
+        </Image>
+        <VerticalStackLayout Margin="100">
+            <Label
+                Text="Sign In"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <Entry Text="{Binding Username, Mode=TwoWay}" Margin="10" Placeholder="Email" PlaceholderColor="Gray"/>
+            <Entry Text="{Binding Password, Mode=TwoWay}" IsPassword="True" Margin="10" Placeholder="Password" PlaceholderColor="Gray"/>
+            <Button Text="Sign In" Command="{Binding SignInCommand}" Margin="20" WidthRequest="100"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

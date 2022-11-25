@@ -2,6 +2,11 @@
 
 The project (com.barghgir.plc.api) is the Application Program Interface (API) that support back-end business data layer to provide data to features like Courses, and content/media.
 
+## Deployment (Publish)
+
+1. Portal: [com-barghgir-plc-api](https://portal.azure.com/#@Vorba.onmicrosoft.com/resource/subscriptions/236217f7-0ad4-4dd6-8553-dc4b574fd2c5/resourceGroups/cca-cc-rg-01/providers/Microsoft.Web/sites/com-barghgir-plc-api/appServices)
+2. Service: [https://com-barghgir-plc-api.azurewebsites.net/swagger](https://com-barghgir-plc-api.azurewebsites.net/swagger)
+
 ## Trust SSL Certificate
 
 During initial start of API project, the SSL require trust of certificate, and prompts as follows:

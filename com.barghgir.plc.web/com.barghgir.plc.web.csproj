@@ -55,9 +55,12 @@
 	<ItemGroup>
 	  <PackageReference Include="AathifMahir.Maui.MauiIcons.Material" Version="0.1.1" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="7.0.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\com.barghgir.plc.common\com.barghgir.plc.common.csproj" />
 	  <ProjectReference Include="..\com.barghgir.plc.data\com.barghgir.plc.data.csproj" />
 	</ItemGroup>
 
@@ -69,6 +72,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\CourseDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\SignInPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

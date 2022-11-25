@@ -12,19 +12,38 @@ using System.Globalization;
 
 namespace com.barghgir.plc.web.ViewModels
 {
+    [QueryProperty(nameof(IsSignedIn), nameof(IsSignedIn))]
+    [QueryProperty(nameof(IsAdmin), nameof(IsAdmin))]
     public partial class CourseListViewModel : BaseViewModel
     {
         CourseService courseService;
 
         public RangeEnabledObservableCollection<Course> Courses { get; } = new ();
 
-        public CourseListViewModel(CourseService courseService)
+        public CourseListViewModel(
+            CourseService courseService,
+            IConnectivity connectivity
+            ): base(connectivity)
         {
             Title = "Courses";
             this.courseService = courseService;
 
             Task.Run(() => this.GetCoursesAsync()).Wait();
+
+            isSignedIn = false; // todo: wire up state
         }
+
+        [ObservableProperty]
+        bool isRefreshing;
+
+        [ObservableProperty]
+        //[NotifyPropertyChangedFor(nameof(ShowSignIn))]
+        [NotifyPropertyChangedFor(nameof(SignInOutText))]
+        bool isSignedIn;
+
+        public bool ShowSignIn { get; } = true; // => !IsSignedIn;
+
+        public string SignInOutText => isSignedIn ? "Sign-Out" : "Sign-In";
 
         [RelayCommand]
         async Task GoToDetailAsync(Course course)
@@ -37,6 +56,19 @@ namespace com.barghgir.plc.web.ViewModels
             {
                 {"Course", course}
             });
+        }
+
+        [RelayCommand]
+        async Task GoToAdminAsync()
+        {
+            await Shell.Current.DisplayAlert("TODO",
+                $"Implement {nameof(GoToAdminAsync)}", "OK");
+
+            //await Shell.Current.GoToAsync($"{nameof(GoToAdminAsync)}", true,
+            //    new Dictionary<string, object>
+            //    {
+            //        {"StateViewModel", null}
+            //    });
         }
 
         [RelayCommand]
@@ -56,7 +88,7 @@ namespace com.barghgir.plc.web.ViewModels
                     Courses.Clear();
 
                 Courses.CollectionChanged += (s, e) => Console.WriteLine("{0} changed", nameof(Courses));
-                Courses.InsertRange((IEnumerable<Course>)courses);
+                Courses.InsertRange(courses);
                 Console.WriteLine("{0}.Count: {1}", nameof(Courses), Courses.Count);
             }
             catch (Exception ex)
@@ -69,6 +101,7 @@ namespace com.barghgir.plc.web.ViewModels
             finally
             {
                 IsBusy = false;
+                IsRefreshing = false;
             }
         }
     }

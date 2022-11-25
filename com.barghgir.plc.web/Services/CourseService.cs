@@ -23,30 +23,13 @@ namespace com.barghgir.plc.web.Services
         }
 
         public static async Task<string> BaseAddress() => (await ConfigurationService.GetEnvironment())?.Options?.BaseServiceEndpoint;
-
         public static async Task<string> CourseListUrl() => $"{await BaseAddress()}/course/list";
         public static async Task<string> CourseDetailUrl() => $"{await BaseAddress()}/course/{{id}}/detail";
 
-        public static HttpClient GetHttpClient()
-        {
-            HttpClient httpClient;
-#if DEBUG
-            //HttpsClientHandlerService handler = new HttpsClientHandlerService();
-            //HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
-
-            //HttpClient httpClient = new DevHttpsConnectionHelper(7132).HttpClient;
-            var handler = new HttpsClientHandlerService();
-            httpClient = new HttpClient(handler.GetPlatformMessageHandler());
-
-#else
-            httpClient = new HttpClient();
-#endif
-            return httpClient;
-        }
-
         public async Task<Course> GetCourseDetailAsync(int id)
         {
-            var response = await GetHttpClient().GetAsync($"{await BaseAddress()}/course/{id}/detail");
+            var url = $"{await BaseAddress()}/course/{id}/detail";
+            var response = await HttpHelper.GetHttpClient().GetAsync(url);
 
             if (response.IsSuccessStatusCode)
             {
@@ -67,7 +50,7 @@ namespace com.barghgir.plc.web.Services
                 {
                     Console.WriteLine($"Getting course list from url {url}");
 
-                    var response = await GetHttpClient().GetAsync(url);
+                    var response = await HttpHelper.GetHttpClient().GetAsync(url);
 
                     if (response.IsSuccessStatusCode)
                     {

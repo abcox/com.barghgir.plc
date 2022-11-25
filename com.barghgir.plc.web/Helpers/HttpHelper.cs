@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace com.barghgir.plc.web.Helpers
 {
-    public class HttpsClientHandlerService
+    public static class HttpHelper
     {
-        public HttpMessageHandler GetPlatformMessageHandler()
+        public static HttpMessageHandler GetPlatformMessageHandler()
         {
             var issuers = new List<string>();
             issuers.Add("CN=Microsoft Azure TLS Issuing CA 01, O=Microsoft Corporation, C=US");
@@ -37,7 +37,7 @@ namespace com.barghgir.plc.web.Helpers
         }
 
 #if IOS
-        public bool IsHttpsLocalhost(NSUrlSessionHandler sender, string url, Security.SecTrust trust)
+        public static bool IsHttpsLocalhost(NSUrlSessionHandler sender, string url, Security.SecTrust trust)
         {
             if (url.StartsWith("https://localhost"))
                 return true;
@@ -45,6 +45,20 @@ namespace com.barghgir.plc.web.Helpers
         }
 #endif
 
+        public static HttpClient GetHttpClient()
+        {
+            HttpClient httpClient;
+#if DEBUG
+            //HttpsClientHandlerService handler = new HttpsClientHandlerService();
+            //HttpClient httpClient = new HttpClient(handler.GetPlatformMessageHandler());
+
+            //HttpClient httpClient = new DevHttpsConnectionHelper(7132).HttpClient;
+            httpClient = new HttpClient(GetPlatformMessageHandler());
+#else
+            httpClient = new HttpClient();
+#endif
+            return httpClient;
+        }
     }
 }
 
