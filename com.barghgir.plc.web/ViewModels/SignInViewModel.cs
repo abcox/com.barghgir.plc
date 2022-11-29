@@ -40,16 +40,15 @@ namespace com.barghgir.plc.web.ViewModels
                 return;
             }
             // TODO: make a helper or service to get keyvault secrets
-            string key = "Bj/ocRz0FtJR0n7LjArcMabp9bi1qGXqQuaqXIJePmw="; // todo: get from config via api call (figure out state or store in local secure storage)
-            string vector = "XtQAltYf3Rj55G1iOiXgWw==";  // todo: get from config via api call
+            string key = ""; // todo: get from config via api call (figure out state or store in local secure storage)
+            string vector = "";  // todo: get from config via api call
             string protectedPassword = DataProtectionHelper.EncryptDataWithAes(password.Trim(), ref key, ref vector); // RJG3LiZaUY9KuAXOqTli6KMymD2tklDjkZTZb3f3k4E=
             //await Shell.Current.DisplayAlert("SignIn", $"Check username and password [{protectedPassword}]", "OK");
             var token = await memberService.SignIn(username, protectedPassword);
-            var url = memberService.lastUrl;
             var isValidToken = JwtTokenHelper.IsTokenValid(token);
             if (!isValidToken)
             {
-                await Shell.Current.DisplayAlert("SignIn", $"Sign-in failed. Email support. isValidToken:{isValidToken}; url:{url}; token:{token}", "OK");
+                await Shell.Current.DisplayAlert("SignIn", $"Sign-in failed. Email support.", "OK");
                 return;
             }
             Password = string.Empty;    // todo: test this...  put some unit testing on presentation!

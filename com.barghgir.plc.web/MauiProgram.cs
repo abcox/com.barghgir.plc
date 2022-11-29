@@ -1,6 +1,4 @@
-﻿using com.barghgir.plc.web.Controls;
-using com.barghgir.plc.web.Handlers;
-using com.barghgir.plc.web.Services;
+﻿using com.barghgir.plc.web.Services;
 using com.barghgir.plc.web.ViewModels;
 using com.barghgir.plc.web.Views;
 using MauiIcons.Material;
@@ -20,11 +18,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 fonts.AddFont(filename: "MaterialIcons-Regular.ttf", alias: "MaterialIcons");
             })
-			.UseMaterialMauiIcons()
-			.ConfigureMauiHandlers(handlers =>
-			{
-                handlers.AddHandler(typeof(Video), typeof(VideoHandler));
-            });
+			.UseMaterialMauiIcons();
 
 		// Course
         builder.Services.AddTransient<CourseDetailPage>();
