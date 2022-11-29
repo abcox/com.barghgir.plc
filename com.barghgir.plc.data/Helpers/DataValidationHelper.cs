@@ -10,7 +10,7 @@ namespace com.barghgir.plc.data.Helpers
 {
     public class DataValidationHelper
     {
-        public static bool IsValidEmail(string email)
+        public static bool IsValidEmail(string? email)
         {
             if (string.IsNullOrWhiteSpace(email))
                 return false;

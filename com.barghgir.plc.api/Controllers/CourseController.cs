@@ -1,9 +1,10 @@
 using com.barghgir.plc.common.Configuration;
-using com.barghgir.plc.api.Helpers;
-using com.barghgir.plc.data.Models;
+using com.barghgir.plc.data.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
+using com.barghgir.plc.data.Models;
+using Context = com.barghgir.plc.data.Context;
+using System.Linq;
 
 namespace com.barghgir.plc.api.Controllers;
 
@@ -11,97 +12,114 @@ namespace com.barghgir.plc.api.Controllers;
 [Route("[controller]")]
 public class CourseController : ControllerBase
 {
-    private static readonly string testDataFilePath = "data/courses.json";
-    //private static readonly List<Course>? courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
+    public static readonly string BaseDir = AppDomain.CurrentDomain.BaseDirectory;
+    public static readonly string TestJsonPathForContent = Path.Combine(BaseDir, @$"seed\{nameof(Content)}.json");
+    public static readonly string TestJsonPathForCourses = Path.Combine(BaseDir, @$"seed\{nameof(Course)}s.json");
+    public static readonly string TestJsonPathForCourseContent = Path.Combine(BaseDir, @$"seed\{nameof(CourseContent)}.json");
 
+    private readonly Context.CcaDevContext dbContext;
     private readonly ILogger<CourseController> logger;
     private readonly ApiOptions options;
 
-    public CourseController(ILogger<CourseController> logger, IOptions<ApiOptions> options)
+    public CourseController(
+        Context.CcaDevContext dbContext,
+        ILogger<CourseController> logger,
+        IOptions<ApiOptions> options
+        )
     {
         this.logger = logger;
 
         if (options?.Value != null) { logger.LogWarning("Api config failure"); }
         this.options = options?.Value ?? new ApiOptions { };
+
+        this.dbContext = dbContext;
     }
 
     [HttpGet]
+    [ProducesResponseType(typeof(IEnumerable<CourseWithoutContent>), StatusCodes.Status200OK)]
     [Route("list", Name = "GetCourseList")]
-    public IEnumerable<Course>? GetList()
+    public IActionResult GetList()
     {
-        IEnumerable<Course>? response = null;
+        IEnumerable<CourseWithoutContent>? response = null;
 
         try
         {
-            var courses = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
+            //var courses = DataHelper.GetJsonFromFile<Course>(TestJsonPathForCourses).Result;
+
+            var courses = dbContext.Courses.ToList();
 
             // TODO:  filter/omit courses with no content (and make a GetCourseListForAdmin that brings them all back (implement filters/search)
 
-            if (courses == null)
+            if (courses == null || courses.Count == 0)
             {
-                logger.LogWarning($"Course data not found");
-                return null;
+                logger.LogWarning($"No data");
+                return BadRequest();
             }
-            response = courses.Select(x => new Course
+            response = courses.Select(x => new CourseWithoutContent
             {
                 Id = x.Id,
                 ImageId = x.ImageId,
                 Category = x.Category,
-                Content = x.Content,
+                //Content = x.Content,
                 ImageUrl = $"{options.Images.SourceUrl}/{x.ImageId}/{options.Images.ListBackgroundSize.WidthPx}/{options.Images.ListBackgroundSize.HeightPx}",
                 Subtitle = x.Subtitle,
                 Title = x.Title,
+                ContentTypeIcon = x.ContentTypeId == 1 ? "Headset" : "Videocam"
+                //ContentType = new ContentType((int)x.ContentTypeId, (x.ContentTypeId == 1 ? ContentType.audio : ContentType.video).ToString())
             })?.AsEnumerable();
         }
         catch (Exception ex)
         {
             logger.LogError($"Something exceptional happened. {ex.Message}");
         }
-        return response;
+        return Ok(response);
     }
 
     [HttpGet]
+    [ProducesResponseType(typeof(Course), StatusCodes.Status200OK)]
     [Route("{id}/detail", Name = "GetCourseDetail")]
-    public Course? GetDetail(int id)
+    public IActionResult GetDetail(int id)
     {
         Course? course = null;
-
+        //await SqlHelper.SeedTablesFromJsonFiles();
         try
         {
-            var courseList = DataHelper.GetDataFromFile<Course>(testDataFilePath).Result;
+            //var courseList = DataHelper.GetJsonFromFile<Course>(TestJsonPathForCourses).Result;
+
+            var courseList = dbContext.Courses.ToList();
 
             if (courseList == null)
             {
                 logger.LogWarning($"Courses has no data");
-                return null;
+                return BadRequest();
             }
 
             logger.LogInformation($"Courses count: {courseList.Count}");
 
-            course = courseList.FirstOrDefault(x => x.Id == id);
+            course = new Course(courseList.FirstOrDefault(x => x.Id == id));
 
             if (course == null)
             {
                 logger.LogWarning($"Course not found for id {id}");
-                return null;
+                return BadRequest();
             }
 
-            var courseContent = DataHelper.GetDataFromFile<CourseContent>("data/CourseContent.json")
+            var courseContent = DataHelper.GetJsonFromFile<CourseContent>(TestJsonPathForCourseContent)
                 .Result?.AsQueryable().Where(x => x.CourseId == course.Id);
 
             if (courseContent == null)
             {
                 logger.LogWarning($"Content not found for course id {course.Id}");
-                return null;
+                return BadRequest();
             }
 
-            var content = DataHelper.GetDataFromFile<Content>("data/Content.json")
+            var content = DataHelper.GetJsonFromFile<Content>(TestJsonPathForContent)
                 .Result?.AsQueryable();
 
             if (content == null)
             {
                 logger.LogWarning($"Content has no data");
-                return null;
+                return BadRequest();
             }
 
             course.Content = (
@@ -118,6 +136,6 @@ public class CourseController : ControllerBase
         {
             logger.LogError($"Something exceptional happened. {ex.Message}");
         }
-        return course;
+        return Ok(course);
     }
 }

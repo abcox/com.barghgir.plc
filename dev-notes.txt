@@ -1,0 +1,19 @@
+https://192.168.2.53:45455/course/1/detail
+
+
+az keyvault set-policy -n cca-cc-rg-01-kv.vault.azure.net --upn adam.cox@vorba.com --secret-permissions get
+
+The Vault 'cca-cc-rg-01-kv.vault.azure.net' not found within subscription.
+
+CORRECT:
+az keyvault set-policy -n cca-cc-rg-01-kv --upn admin@vorba.onmicrosoft.com --secret-permissions get
+
+
+Domain:  vorba.onmicrosoft.com
+SPN: admin@vorba.onmicrosoft.com
+
+Managed Identity: https://portal.azure.com/#view/Microsoft_AAD_IAM/ManagedAppMenuBlade/~/Overview/objectId/994c8efd-3e69-4da1-85d6-20aeda3d3cbb/appId/dd1f0fb0-ef23-4188-8fdb-758a763028e4
+
+
+
+

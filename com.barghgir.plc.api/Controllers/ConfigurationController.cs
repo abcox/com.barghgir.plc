@@ -1,6 +1,4 @@
 using com.barghgir.plc.common.Configuration;
-using com.barghgir.plc.api.Helpers;
-using com.barghgir.plc.data.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;

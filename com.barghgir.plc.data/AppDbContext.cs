@@ -1,4 +1,4 @@
-﻿using com.barghgir.plc.data.Models;
+﻿using com.barghgir.plc.data.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace com.barghgir.plc.api.Data
@@ -12,7 +12,7 @@ namespace com.barghgir.plc.api.Data
 
         public DbSet<Content> Content { get; set; }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<CourseContent> CourseContent { get; set; }
+        public DbSet<Course> CourseContent { get; set; }
         public DbSet<Member> Member { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

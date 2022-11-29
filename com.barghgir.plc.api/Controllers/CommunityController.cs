@@ -1,6 +1,4 @@
 ﻿using com.barghgir.plc.api.Data;
-using com.barghgir.plc.data.Helpers;
-using com.barghgir.plc.data.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -9,6 +7,10 @@ using Microsoft.Extensions.Options;
 using com.barghgir.plc.infra.common.Encryption;
 using com.barghgir.plc.infra.Security.Token;
 using com.barghgir.plc.common.Configuration;
+using com.barghgir.plc.data.Models;
+using Microsoft.EntityFrameworkCore;
+using Context = com.barghgir.plc.data.Context;
+using com.barghgir.plc.data.Helpers;
 
 namespace com.barghgir.plc.api.Controllers;
 
@@ -16,69 +18,78 @@ namespace com.barghgir.plc.api.Controllers;
 [ApiController]
 public class CommunityController : ControllerBase
 {
-    private readonly AppDbContext data;
+    private readonly Context.CcaDevContext dbContext;
     private readonly ILogger<CommunityController> logger;
     private readonly SecurityOptions options;
     private readonly IJwtTokenGenerator tokenGenerator;
 
     public CommunityController(
-        AppDbContext dbContext,
+        Context.CcaDevContext dbContext,
         ILogger<CommunityController> logger,
         IOptions<ApiOptions> options,
         IJwtTokenGenerator tokenGenerator
         )
     {
         this.logger = logger;
-        this.data = dbContext;
+        this.dbContext = dbContext;
         this.options = options.Value.Security;
         this.tokenGenerator = tokenGenerator;
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
     [Route("auth/signin", Name = "SignIn")]
     public IActionResult SignIn(string email, string password, bool isPasswordClear = false)
     {
-        Member? member = data.Member.FirstOrDefault(x => x.Email.Equals(email));
-        string protectedPassword = member?.Password != null && isPasswordClear ?
-            DataProtectionHelper.EncryptDataWithAes(password.Trim(),
-                options.AesEncryptionKey, options.AesEncryptionIVector) : password;
-        if (string.IsNullOrEmpty(password) ||
-            member == null || member.LockDate != null ||
-            member?.Password != protectedPassword)
+        string token;
+        try
         {
-            if (member != null)
+            Context.Member? member = dbContext.Members.FirstOrDefault(x => x.Email.Equals(email));
+            string protectedPassword = member?.Password != null && isPasswordClear ?
+                DataProtectionHelper.EncryptDataWithAes(password.Trim(),
+                    options.AesEncryptionKey, options.AesEncryptionIVector) : password;
+            if (string.IsNullOrEmpty(password) ||
+                member == null || member.LockDate != null ||
+                member?.Password != protectedPassword)
             {
-                member.LastFailedSignInDate = DateTime.UtcNow;
-                member.FailedSignInCount++;
-                if (member.FailedSignInCount >= options.FailedSignInCountMaxLimit)
+                if (member != null)
                 {
-                    member.LockDate = DateTime.UtcNow;
-                    // todo: should we notify user (and admin?)?
+                    member.LastFailedSignInDate = DateTime.UtcNow;
+                    member.FailedSignInCount++;
+                    if (member.FailedSignInCount >= options.FailedSignInCountMaxLimit)
+                    {
+                        member.LockDate = DateTime.UtcNow;
+                        // todo: should we notify user (and admin?)?
+                    }
+                    dbContext.SaveChanges();
                 }
-                data.SaveChanges();
+                logger.LogError("Invalid username or password");
+                return BadRequest("Invalid username or password");
             }
-            logger.LogError("Invalid username or password");
-            return BadRequest("Invalid username or password");
+            member.LastSignInDate = DateTime.UtcNow;
+            member.FailedSignInCount = 0;
+            member.LockDate = null;
+
+            token = tokenGenerator.CreateToken(
+                email, id: (member?.Id ?? 0).ToString(),
+                isAdmin: member?.IsAdmin ?? false
+                ).Result;
+            //member.LastToken = token;
+            dbContext.SaveChanges();
         }
-        member.LastSignInDate = DateTime.UtcNow;
-        member.FailedSignInCount = 0;
-        member.LockDate = null;
-
-        string token = tokenGenerator.CreateToken(
-            email, id: (member?.Id ?? 0).ToString(),
-            isAdmin: member?.IsAdmin ?? false
-            ).Result;
-        //member.LastToken = token;
-
-        data.SaveChanges();
+        catch (Exception ex)
+        {
+            logger.LogError(ex.Message);
+            return BadRequest("Oops! Something bad happened. Try againg?");
+        }
         return Ok(token);
     }
 
     [HttpGet]
     [Route("admin/member/list", Name = "GetMemberList")]
-    public IEnumerable<Member>? GetMemberList()
+    public IEnumerable<Context.Member>? GetMemberList()
     {
-        var members = data.Member.ToList();
+        var members = dbContext.Members.ToList();
         return members;
     }
 
@@ -100,7 +111,7 @@ public class CommunityController : ControllerBase
     public IActionResult AdminMemberUnlock(int memberId)
     {
         logger.LogInformation("{method}; memberId: {memberId}", nameof(AdminMemberUnlock), memberId);
-        Member? member = data.Member.FirstOrDefault(x => x.Id.Equals(memberId));
+        Context.Member? member = dbContext.Members.FirstOrDefault(x => x.Id.Equals(memberId));
         if (member == null)
         {
             logger.LogError("Member not found");
@@ -110,21 +121,21 @@ public class CommunityController : ControllerBase
         member.LastFailedSignInDate = null;
         member.LastPasswordUpdate = null;   // todo: at client, when null or > policy days, force password update
         member.LockDate = null;
-        data.Member.Update(member);
-        data.SaveChanges();
+        dbContext.Members.Update(member);
+        dbContext.SaveChanges();
         return Ok(member);
     }
 
     [HttpPost]
     [Route("admin/member/create", Name = "AdminMemberCreate")]
-    public IActionResult AdminMemberCreate(Member member, string? password)
+    public IActionResult AdminMemberCreate(Context.Member member, string? password)
     {
         if (!DataValidationHelper.IsValidEmail(member?.Email))
         {
             logger.LogError("Email not valid");
             return BadRequest();
         }
-        if (data.Member.Any(x => x.Email.Equals(member.Email)))
+        if (dbContext.Members.Any(x => x.Email.Equals(member.Email)))
         {
             logger.LogError("Member exists");
             return BadRequest("Member exists");
@@ -140,22 +151,28 @@ public class CommunityController : ControllerBase
                     options.AesEncryptionIVector);
             member.Password = protectedPassword;
         }
-        data.Member.Add(member);
-        data.SaveChanges();
+        dbContext.Members.Add(member);
+        dbContext.SaveChanges();
         return Ok(member);
     }
 
     [HttpPost]
     [Route("member/create", Name = "CreateMember")]
-    public IActionResult CreateMember(Member member)
+    public IActionResult CreateMember(Context.Member member)
     {
+        if (member == null)
+        {
+            logger.LogError("Member required");
+            return BadRequest();
+        }
         // todo: best do this check at the client
         if (!DataValidationHelper.IsValidEmail(member?.Email))
         {
             logger.LogError("Email not valid");
             return BadRequest();
         }
-        if (data.Member.Any(x => x.Email.Equals(member.Email)))
+        var memberExists = dbContext.Members.Any(x => x.Email.Equals(member.Email));
+        if (memberExists)
         {
             logger.LogError("Member exists");
             return BadRequest("Member exists");
@@ -163,22 +180,22 @@ public class CommunityController : ControllerBase
         member.LastSignInDate = null;
         member.LockDate = null;
         member.VerifyDate = null;
-        data.Member.Add(member);
-        data.SaveChanges();
+        dbContext.Members.Add(member);
+        dbContext.SaveChanges();
         return Ok(member);
     }
 
     [HttpPut]
     [Route("member/profile/update", Name = "UpdateMemberProfile")]
-    public IActionResult UpdateMemberProfile(Member? member)
+    public IActionResult UpdateMemberProfile(Context.Member? member)
     {
         if (member == null)
         {
             logger.LogError("Member required");
             return BadRequest("Member required");
         }
-        Member? updateMember = member;
-        member = data.Member.FirstOrDefault(x => x.Id.Equals(member.Id) && x.LockDate < DateTime.UtcNow);
+        Context.Member? updateMember = member;
+        member = dbContext.Members.FirstOrDefault(x => x.Id.Equals(member.Id) && x.LockDate < DateTime.UtcNow);
         if (member == null)
         {
             logger.LogError("Member not found");
@@ -190,8 +207,8 @@ public class CommunityController : ControllerBase
             return BadRequest("Member account locked");
         }
         member.Name = updateMember.Name;
-        data.Member.Update(member);
-        data.SaveChanges();
+        dbContext.Members.Update(member);
+        dbContext.SaveChanges();
         return Ok(member);
     }
 
@@ -205,7 +222,7 @@ public class CommunityController : ControllerBase
             logger.LogError("Invalid input");
             return BadRequest("Invalid input");
         }
-        Member? member = data.Member.FirstOrDefault(x => x.Email.Equals(email));
+        Context.Member? member = dbContext.Members.FirstOrDefault(x => x.Email.Equals(email));
         if (member == null || (member.LockDate != null && member.LockDate < DateTime.UtcNow))
         {
             logger.LogError("Member not found");
@@ -229,8 +246,8 @@ public class CommunityController : ControllerBase
             member.FailedSignInCount = 0;
             member.LastPasswordUpdate = DateTime.UtcNow;
             member.Password = protectedPasswordNew;
-            data.Member.Update(member);
-            data.SaveChanges();
+            dbContext.Members.Update(member);
+            dbContext.SaveChanges();
         }
         catch (Exception ex)
         {
@@ -242,22 +259,22 @@ public class CommunityController : ControllerBase
 
     [HttpPut]
     [Route("member/verify", Name = "VerifyMember")]
-    public IActionResult VerifyMember(Member? member)
+    public IActionResult VerifyMember(Context.Member? member)
     {
         if (member == null)
         {
             logger.LogError("Member required");
             return BadRequest("Member required");
         }
-        member = data.Member.FirstOrDefault(x => x.Id.Equals(member.Id));
+        member = dbContext.Members.FirstOrDefault(x => x.Id.Equals(member.Id));
         if (member == null)
         {
             logger.LogError("Member not found");
             return BadRequest("Member not found");
         }
         member.VerifyDate = DateTime.UtcNow;
-        data.Member.Update(member);
-        data.SaveChanges();
+        dbContext.Members.Update(member);
+        dbContext.SaveChanges();
         return Ok(member);
     }
 }

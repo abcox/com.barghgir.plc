@@ -1,13 +1,12 @@
-﻿using com.barghgir.plc.api.Data;
-using com.barghgir.plc.data.Models;
+﻿using com.barghgir.plc.data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using static com.barghgir.plc.api.Data.Configuration;
-using Environment = com.barghgir.plc.api.Data.Configuration.Environment;
+using static com.barghgir.plc.data.Models.Configuration;
+using Environment = com.barghgir.plc.data.Models.Configuration.Environment;
 
 namespace com.barghgir.plc.web.Services
 {

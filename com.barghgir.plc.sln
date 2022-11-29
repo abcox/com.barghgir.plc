@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.api", "com
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{042131AC-DBF8-4234-9796-D26E047E2B21}"
 	ProjectSection(SolutionItems) = preProject
+		dev-notes.txt = dev-notes.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -20,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.infra", "c
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.infra.test", "com.barghgir.plc.infra.test\com.barghgir.plc.infra.test.csproj", "{CEF3AD4B-5317-4403-BE1F-F5026B7FC523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.barghgir.plc.common", "com.barghgir.plc.common\com.barghgir.plc.common.csproj", "{CC94A864-A277-4DF0-8938-F34BBD03A189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.common", "com.barghgir.plc.common\com.barghgir.plc.common.csproj", "{CC94A864-A277-4DF0-8938-F34BBD03A189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.barghgir.plc.common.test", "com.barghgir.plc.common.test\com.barghgir.plc.common.test.csproj", "{BF782307-5BE4-41D2-ABED-B61FAF386D2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "com.barghgir.plc.common.test", "com.barghgir.plc.common.test\com.barghgir.plc.common.test.csproj", "{BF782307-5BE4-41D2-ABED-B61FAF386D2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.barghgir.plc.data.test", "com.barghgir.plc.data.test\com.barghgir.plc.data.test.csproj", "{B667D146-254C-4BF8-90E2-2E65DD5B522B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +69,10 @@ Global
 		{BF782307-5BE4-41D2-ABED-B61FAF386D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF782307-5BE4-41D2-ABED-B61FAF386D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF782307-5BE4-41D2-ABED-B61FAF386D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B667D146-254C-4BF8-90E2-2E65DD5B522B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B667D146-254C-4BF8-90E2-2E65DD5B522B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B667D146-254C-4BF8-90E2-2E65DD5B522B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B667D146-254C-4BF8-90E2-2E65DD5B522B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

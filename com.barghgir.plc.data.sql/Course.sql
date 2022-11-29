@@ -5,5 +5,5 @@
     [Subtitle] NVARCHAR(50) NULL, 
     [Category] NVARCHAR(50) NULL, 
     [ImageId] INT NULL, 
-    [ContentType] VARCHAR(50) NULL
+    [ContentTypeId] INT NULL
 )

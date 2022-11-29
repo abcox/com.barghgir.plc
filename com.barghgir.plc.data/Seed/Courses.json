@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "ULTIMATE EDGE",
+    "title": "David's Course",
     "subtitle": "The #1 Self-Improvement of...",
     "category": "Relationships",
     "imageId": 177,
-    "contentType": "video"
+    "contentTypeId": 2
 
   },
   {
@@ -14,7 +14,7 @@
     "subtitle": "Eliminate Your \"To-Do\" List and Make T...",
     "category": "Productivity",
     "imageId": 829,
-    "contentType": "video"
+    "contentTypeId": 2
   },
   {
     "id": 3,
@@ -22,7 +22,7 @@
     "subtitle": "10 Days to Creating Lasting & Impactful Changes",
     "category": "Love & Relationships",
     "imageId": 380,
-    "contentType": "video"
+    "contentTypeId": 2
   },
   {
     "id": 4,
@@ -30,7 +30,7 @@
     "subtitle": "30-Day Program for Unlimited Success",
     "category": "Peak Performance",
     "imageId": 741,
-    "contentType": "audio"
+    "contentTypeId": 1
   },
   {
     "id": 5,
@@ -38,7 +38,7 @@
     "subtitle": "10 Steps to Master the Art of Enrolment",
     "category": "Career & Business",
     "imageId": 871,
-    "contentType": "audio"
+    "contentTypeId": 1
   },
   {
     "id": 6,
@@ -46,7 +46,7 @@
     "subtitle": "Learn the Strategies to...",
     "category": "Leadership",
     "imageId": 865,
-    "contentType": "audio"
+    "contentTypeId": 1
   },
   {
     "id": 7,
@@ -54,7 +54,7 @@
     "subtitle": "Sustainable Weight Loss Strategies t...",
     "category": "Health & Energy",
     "imageId": 685,
-    "contentType": "audio"
+    "contentTypeId": 1
   },
   {
     "id": 8,
@@ -62,6 +62,6 @@
     "subtitle": "Adopt the Tactics to Thrive in the On...",
     "category": "Relationships",
     "imageId": 866,
-    "contentType": "audio"
+    "contentTypeId": 1
   }
 ]

@@ -1,5 +1,6 @@
 using com.barghgir.plc.api.Data;
 using com.barghgir.plc.common.Configuration;
+using com.barghgir.plc.data.Context;
 using com.barghgir.plc.infra;
 using com.barghgir.plc.infra.Security.Token;
 using Microsoft.EntityFrameworkCore;
@@ -10,8 +11,6 @@ using Serilog.Settings.Configuration;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddOptions<ApiOptions>().BindConfiguration(""); // reads the whole appset
 
 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 if (!string.IsNullOrEmpty(env))
@@ -24,8 +23,10 @@ if (!string.IsNullOrEmpty(env))
 
 var services = builder.Services;
 
+services.AddOptions<ApiOptions>().BindConfiguration(""); // reads the whole appset
+
 // Add services to the container.
-services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString(nameof(AppDbContext))));
+services.AddDbContext<CcaDevContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString(nameof(CcaDevContext))));
 services.AddTransient<IJwtTokenGenerator, JwtTokenGenerator>();
 services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

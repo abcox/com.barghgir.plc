@@ -11,7 +11,6 @@ namespace com.barghgir.plc.common.Encryption
 {
     public static class JwtTokenHelper
     {
-
         public static JwtSecurityToken? GetJwtSecurityToken(string jwt)
         {
             if (string.IsNullOrEmpty(jwt)) return null;
