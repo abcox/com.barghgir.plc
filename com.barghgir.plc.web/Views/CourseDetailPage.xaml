@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:com.barghgir.plc.web.Controls"
              x:Class="com.barghgir.plc.web.Views.CourseDetailPage"
              xmlns:model="clr-namespace:com.barghgir.plc.data.Models;assembly=com.barghgir.plc.data"
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
@@ -64,13 +65,15 @@
             Grid.Row="1"
             HeightRequest="200"
             Padding="0">
-            <Label
-                FontSize="22"
+            <!--<Label
+                FontSize="22"   
                 FontAttributes="Bold"
                 Margin="10"
                 Opacity=".7"
                 Text="Media Player"
-                TextColor="White"/>
+                TextColor="White"/>-->
+            <controls:Video x:Name="video"
+                    Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4" />
         </Frame>
     </Grid>
 </ContentPage>

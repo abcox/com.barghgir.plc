@@ -22,12 +22,15 @@ namespace com.barghgir.plc.web.Services
         public static async Task<string> BaseAddress() =>
             (await ConfigurationService.GetEnvironment())?.Options?.BaseServiceEndpoint;
 
+        public string lastUrl { get; set; }
+
         public async Task<string> SignIn(string username, string protectedPassword)
         {
             string token; //adam%40adamcox.net
             var encodedUsername = WebUtility.UrlEncode(username);
             var encodedProtectedPassword = WebUtility.UrlEncode(protectedPassword);
             var url = $"{await BaseAddress()}/community/auth/signin?email={encodedUsername}&password={encodedProtectedPassword}&isPasswordClear=false";
+            lastUrl = url;
             string json = JsonSerializer.Serialize(new {
                 username,
                 password = protectedPassword
