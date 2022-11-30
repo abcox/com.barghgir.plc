@@ -7,7 +7,7 @@
              xmlns:viewmodel="clr-namespace:com.barghgir.plc.web.ViewModels"
              x:DataType="viewmodel:CourseDetailViewModel"
              Title="{Binding Course.Title}">
-    <Grid RowDefinitions="*, Auto">
+    <Grid RowDefinitions="*, *">
         <Image
             Source="{Binding Course.ImageUrl}"
             Aspect="AspectFill"/>
@@ -40,19 +40,31 @@
                    Padding="10,10,0,0"
                    BackgroundColor="Transparent"
                    BorderColor="Transparent">
-                <CollectionView BackgroundColor="Transparent"
-                            ItemsSource="{Binding Course.Content}"
-                            SelectionMode="None">
+                <CollectionView
+                    x:Name="collectionView"
+                    BackgroundColor="Transparent"
+                    ItemsSource="{Binding Course.Content}"
+                    SelectionMode="None">
                     <CollectionView.ItemTemplate>
                         <DataTemplate x:DataType="model:Content">
-                            <Grid ColumnDefinitions="Auto,Auto,*"
+                            <Border BackgroundColor="Transparent" StrokeThickness="0" Margin="10,0,10,10">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="2"/>
+                                </Border.StrokeShape>
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseDetailViewModel}}, Path=SelectCourseDetailCommand}"
+                                        CommandParameter="{Binding .}"/>
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="Auto,Auto,*"
                                   RowDefinitions="*,Auto"
                                   Margin="10,15,10,15">
-                                <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"></Label>
-                                <Label Grid.Column="1" TextColor="White" Text="." FontSize="18" FontAttributes="Bold"></Label>
-                                <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="18" FontAttributes="Bold" Margin="10,0"></Label>
-                                <Label Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" TextColor="LightGray" Text="{Binding DurationSeconds}" FontSize="14" FontAttributes="Bold" Margin="20,0"></Label>
-                            </Grid>
+                                    <Label Grid.Column="0" TextColor="White" Text="{Binding Index}" FontSize="18" FontAttributes="Bold" Margin="0,0,0,0"></Label>
+                                    <Label Grid.Column="1" TextColor="White" Text="." FontSize="18" FontAttributes="Bold"></Label>
+                                    <Label Grid.Column="2" TextColor="White" Text="{Binding Title}" FontSize="18" FontAttributes="Bold" Margin="10,0"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="3" TextColor="LightGray" Text="{Binding DurationSeconds}" FontSize="14" FontAttributes="Bold" Margin="20,0"></Label>
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
@@ -63,17 +75,30 @@
             BorderColor="Black"
             CornerRadius="0"
             Grid.Row="1"
-            HeightRequest="200"
-            Padding="0">
-            <!--<Label
-                FontSize="22"   
-                FontAttributes="Bold"
-                Margin="10"
-                Opacity=".7"
-                Text="Media Player"
-                TextColor="White"/>-->
-            <controls:Video x:Name="video"
-                    Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4" />
+            HeightRequest="490"
+            Padding="0">            
+            <!--<controls:Video
+                x:Name="video"
+                Source="https://barghgir.blob.core.windows.net/public/BigBuckBunny_512kb.mp4" />-->
+            <controls:Video
+                x:Name="video"
+                Source="{Binding SelectedCourseContentSourceUri}"/>
         </Frame>
+        <!--<Label
+            Grid.Row="1"
+            FontSize="22"   
+            FontAttributes="Bold"
+            Margin="10"
+            Opacity=".7"
+            Text="{Binding SelectedCourseContent.Title}"
+            TextColor="White"/>-->
+        <!--<Label
+            Grid.Row="1"
+            FontSize="22"   
+            FontAttributes="Bold"
+            Margin="10"
+            Opacity=".7"
+            Text="{Binding SelectedCourseContent.Source}"
+            TextColor="White"/>-->
     </Grid>
 </ContentPage>

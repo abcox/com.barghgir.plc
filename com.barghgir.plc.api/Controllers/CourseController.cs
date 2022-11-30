@@ -129,7 +129,14 @@ public class CourseController : ControllerBase
                 ).ToList();
 
             var i = 1;
-            course.Content.ForEach(x => x.Index = i++);
+            course.Content = course.Content.Select(x => new Content
+            {
+                DurationSeconds = x.DurationSeconds,
+                Id = x.Id,
+                Index = i,
+                Source = $"https://barghgir.blob.core.windows.net/public/{i++}.mp4",
+                Title = x.Title,
+            }).ToList();
             course.ImageUrl = $"{options.Images.SourceUrl}/{course.ImageId}/{options.Images.DetailBackgroundSize.WidthPx}/{options.Images.DetailBackgroundSize.HeightPx}";
         }
         catch ( Exception ex )

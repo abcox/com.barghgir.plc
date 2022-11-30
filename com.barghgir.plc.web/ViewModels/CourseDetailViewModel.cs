@@ -1,4 +1,5 @@
 ﻿using com.barghgir.plc.data.Models;
+using com.barghgir.plc.web.Controls;
 using com.barghgir.plc.web.Services;
 using System;
 using System.Collections.Generic;
@@ -19,11 +20,28 @@ public partial class CourseDetailViewModel : BaseViewModel
         ): base(connectivity)
     {
         this.courseService = courseService;
+        SelectedCourseContentSourceUri = VideoSource.FromUri("https://barghgir.blob.core.windows.net/public/1.mp4");
     }
 
     [ObservableProperty]
     [NotifyCanExecuteChangedFor(nameof(GetCourseDetailCommand))]
     Course course;
+
+    [ObservableProperty]
+    VideoSource selectedCourseContentSourceUri;
+
+    [ObservableProperty]
+    Content selectedCourseContent;
+
+    [RelayCommand]
+    public async Task OnSelectCourseDetailAsync(Content content)
+    {
+        await Task.Run(() =>
+        {
+            SelectedCourseContentSourceUri = VideoSource.FromUri(content.Source);
+            SelectedCourseContent = content;
+        });
+    }
 
     partial void OnCourseChanged(Course value)
     {

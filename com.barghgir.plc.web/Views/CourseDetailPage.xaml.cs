@@ -19,4 +19,9 @@ public partial class CourseDetailPage : ContentPage
         //if (viewModel.GetCourseDetailCommand.CanExecute(null))
         //    viewModel.GetCourseDetailCommand.Execute(null);
     }
+
+    void OnContentPageUnloaded(object sender, EventArgs e)
+    {
+        video.Handler?.DisconnectHandler();
+    }
 }
