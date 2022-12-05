@@ -7,78 +7,46 @@ using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using com.barghgir.plc.common.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace com.barghgir.plc.web.Services
 {
-    public class CourseService
+    public class CourseService : BaseService
     {
-        //HttpClient httpClient;
-
+        HttpClient httpClient;
         List<Course> courseList = new();
         Course courseDetail = new();
+        private readonly ILogger<CourseService> logger;
 
-        public CourseService()
+        public CourseService(
+            IConfigurationService configurationService,
+            ILogger<CourseService> logger) :base(configurationService)
         {
-            //httpClient = new HttpClient();
+            this.httpClient = HttpHelper.GetHttpClient(); // new HttpClient();
+            this.logger = logger;
         }
-
-        public static async Task<string> BaseAddress() => (await ConfigurationService.GetEnvironment())?.Options?.BaseServiceEndpoint;
-        public static async Task<string> CourseListUrl() => $"{await BaseAddress()}/course/list";
-        public static async Task<string> CourseDetailUrl() => $"{await BaseAddress()}/course/{{id}}/detail";
 
         public async Task<Course> GetCourseDetailAsync(int id)
         {
-            var url = $"{await BaseAddress()}/course/{id}/detail";
-            var response = await HttpHelper.GetHttpClient().GetAsync(url);
-
-            if (response.IsSuccessStatusCode)
-            {
-                courseDetail = await response.Content.ReadFromJsonAsync<Course>();
-            }
-            // TODO: figure out how to send notifications to present user with feedback like "successful" or "error"
-
+            var url = $"{BaseAddress}/course/{id}/detail";
+            Console.WriteLine($"Getting course list from url {url}");
+            var response = await httpClient.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+                throw new ApplicationException($"{nameof(GetCourseDetailAsync)} failed: {response.ReasonPhrase}");
+            courseDetail = await response.Content.ReadFromJsonAsync<Course>();
             return courseDetail;
         }
 
-        public async Task<List<Course>> GetCourses()
+        public async Task<List<Course>> GetCoursesAsync()
         {
-            var url = await CourseListUrl(); // "https://10.0.2.2:5001/course/list";
-            var testJsonFilename = "courses.json";
-            try
-            {
-                if (!string.IsNullOrEmpty(url))
-                {
-                    Console.WriteLine($"Getting course list from url {url}");
-
-                    var response = await HttpHelper.GetHttpClient().GetAsync(url);
-
-                    if (response.IsSuccessStatusCode)
-                    {
-                        courseList = await response.Content.ReadFromJsonAsync<List<Course>>();
-                    }
-                }
-                else
-                {
-                    Debug.WriteLine($"Url is empty. Will try to substitute with test JSON data from filename {testJsonFilename}");
-                }
-
-                if (courseList.Count == 0)
-                {
-                    Console.WriteLine($"Substituting with test JSON data from filename {testJsonFilename}");
-
-                    using var stream = await FileSystem.OpenAppPackageFileAsync(testJsonFilename);
-                    using var reader = new StreamReader(stream);
-                    var contents = await reader.ReadToEndAsync();
-                    courseList = JsonSerializer.Deserialize<List<Course>>(contents);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Failed to get courses from url {url} or from test JSON filename {testJsonFilename}. ERROR: {ex.Message}");
-            }
-
+            var url = $"{BaseAddress}/course/list"; // "https://10.0.2.2:5001/course/list";
+            Console.WriteLine($"Getting course list from url {url}");
+            var response = await httpClient.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+                throw new ApplicationException($"{nameof(GetCoursesAsync)} failed: {response.ReasonPhrase}");
+            courseList = await response.Content.ReadFromJsonAsync<List<Course>>();
             return courseList;
         }
-
     }
 }

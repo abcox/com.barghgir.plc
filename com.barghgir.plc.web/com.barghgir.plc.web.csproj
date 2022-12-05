@@ -73,6 +73,7 @@
 
 	<ItemGroup>
 	  <PackageReference Include="AathifMahir.Maui.MauiIcons.Material" Version="0.1.1" />
+	  <PackageReference Include="CommunityToolkit.Maui" Version="2.0.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="7.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions" Version="7.0.0" />
@@ -96,6 +97,10 @@
 	  <MauiXaml Update="Views\SignInPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Extensions\" />
 	</ItemGroup>
 
 </Project>

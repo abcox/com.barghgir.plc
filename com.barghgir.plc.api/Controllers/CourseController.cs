@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using com.barghgir.plc.data.Models;
 using Context = com.barghgir.plc.data.Context;
 using System.Linq;
+using com.barghgir.plc.common.Extensions;
 
 namespace com.barghgir.plc.api.Controllers;
 
@@ -18,21 +19,27 @@ public class CourseController : ControllerBase
     public static readonly string TestJsonPathForCourseContent = Path.Combine(BaseDir, @$"seed\{nameof(CourseContent)}.json");
 
     private readonly Context.CcaDevContext dbContext;
+    private readonly string? imageSourceUrl;
+    private readonly int? imageWidthPx;
+    private readonly int? imageHeightPx;
     private readonly ILogger<CourseController> logger;
     private readonly ApiOptions options;
 
     public CourseController(
         Context.CcaDevContext dbContext,
         ILogger<CourseController> logger,
-        IOptions<ApiOptions> options
+        IOptions<ApiOptions> apiOptions
         )
     {
         this.logger = logger;
 
-        if (options?.Value != null) { logger.LogWarning("Api config failure"); }
-        this.options = options?.Value ?? new ApiOptions { };
+        if (apiOptions?.Value == null) { logger.LogWarning("Api config failure"); }
 
+        this.options = apiOptions?.Value ?? new ApiOptions { };
         this.dbContext = dbContext;
+        this.imageSourceUrl = options?.Images?.SourceUrl;
+        this.imageWidthPx = options?.Images?.ListBackgroundSize?.WidthPx;
+        this.imageHeightPx = options?.Images?.ListBackgroundSize?.HeightPx;
     }
 
     [HttpGet]
@@ -61,7 +68,7 @@ public class CourseController : ControllerBase
                 ImageId = x.ImageId,
                 Category = x.Category,
                 //Content = x.Content,
-                ImageUrl = $"{options.Images.SourceUrl}/{x.ImageId}/{options.Images.ListBackgroundSize.WidthPx}/{options.Images.ListBackgroundSize.HeightPx}",
+                ImageUrl = $"{imageSourceUrl}/{x.ImageId}/{imageWidthPx}/{imageHeightPx}",
                 Subtitle = x.Subtitle,
                 Title = x.Title,
                 ContentTypeIcon = x.ContentTypeId == 1 ? "Headset" : "Videocam"
@@ -131,17 +138,18 @@ public class CourseController : ControllerBase
             var i = 1;
             course.Content = course.Content.Select(x => new Content
             {
-                DurationSeconds = x.DurationSeconds,
+                DurationDisplay = $"{x.DurationSeconds / 60}:{$"{(x?.DurationSeconds ?? 0) % 60}".PadLeft(2, '0')}",
+                DurationSeconds = x?.DurationSeconds ?? 0,
                 Id = x.Id,
-                Index = i,
-                Source = $"https://barghgir.blob.core.windows.net/public/{i++}.mp4",
+                Source = i < 4 ? $"{options.Azure.Storage.Url}/{i}.mp4" : x.Source,
                 Title = x.Title,
+                Index = i++,
             }).ToList();
             course.ImageUrl = $"{options.Images.SourceUrl}/{course.ImageId}/{options.Images.DetailBackgroundSize.WidthPx}/{options.Images.DetailBackgroundSize.HeightPx}";
         }
         catch ( Exception ex )
         {
-            logger.LogError($"Something exceptional happened. {ex.Message}");
+            logger.LogError("Something exceptional happened. {exceptionMessage}", ex.Message);
         }
         return Ok(course);
     }

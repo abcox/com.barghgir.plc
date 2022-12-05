@@ -39,12 +39,8 @@ namespace com.barghgir.plc.web.ViewModels
                 await Shell.Current.DisplayAlert("Error!", $"Password required", "OK");
                 return;
             }
-            // TODO: make a helper or service to get keyvault secrets
-            string key = ""; // todo: get from config via api call (figure out state or store in local secure storage)
-            string vector = "";  // todo: get from config via api call
-            string protectedPassword = DataProtectionHelper.EncryptDataWithAes(password.Trim(), ref key, ref vector); // RJG3LiZaUY9KuAXOqTli6KMymD2tklDjkZTZb3f3k4E=
             //await Shell.Current.DisplayAlert("SignIn", $"Check username and password [{protectedPassword}]", "OK");
-            var token = await memberService.SignIn(username, protectedPassword);
+            var token = await memberService.SignIn(username.Trim(), password.Trim());
             var url = memberService.lastUrl;
             var isValidToken = JwtTokenHelper.IsTokenValid(token);
             if (!isValidToken)

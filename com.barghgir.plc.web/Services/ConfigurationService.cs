@@ -1,7 +1,12 @@
-﻿using com.barghgir.plc.data.Models;
+﻿using com.barghgir.plc.common.Configuration;
+using com.barghgir.plc.common.Helpers;
+using com.barghgir.plc.data.Models;
+using com.barghgir.plc.web.Helpers;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -10,19 +15,54 @@ using Environment = com.barghgir.plc.data.Models.Configuration.Environment;
 
 namespace com.barghgir.plc.web.Services
 {
-    public static class ConfigurationService
+    public class ConfigurationService : IConfigurationService
     {
-        public static readonly string EnvironmentConfigurationJsonFilename = "configuration.json";
+        public readonly string EnvironmentConfigurationJsonFilename = "configuration.json";
+        private readonly ILogger logger;
 
-        public static async Task<Environment> GetEnvironment()
+        private Environment environment;
+        private ApiOptions options;
+
+        public ConfigurationService(ILogger<ConfigurationService> logger)
         {
-            Environment? environment;
+            this.logger = logger;
+            //Environment = GetEnvironment();
+            //Options = GetAppConfigAsync();
+        }
+
+        public string BaseAddress { get { return Environment?.Options?.BaseServiceEndpoint; } }
+
+        public Environment Environment
+        {
+            get
+            {
+                if (environment == null)
+                {
+                    environment = GetEnvironment().Result;
+                }
+                return environment;
+            }
+        }
+
+        public ApiOptions Options
+        {
+            get
+            {
+                if (options == null)
+                {
+                    options = GetAppConfigAsync();
+                }
+                return options;
+            }
+        }
+
+        public async Task<Environment> GetEnvironment()
+        {
+            Environment environment;
             try
             {
-                using var stream = await FileSystem.OpenAppPackageFileAsync(EnvironmentConfigurationJsonFilename);
-                using var reader = new StreamReader(stream);
-                var contents = await reader.ReadToEndAsync();
-                var configuration = JsonSerializer.Deserialize<Configuration>(contents);
+                var configuration = await FileHelpers
+                    .GetDeserializedContent<Configuration>(EnvironmentConfigurationJsonFilename);
                 environment = configuration.Environments?
                     .FirstOrDefault(x => x.Name == configuration.SelectedEnvironmentName);
 
@@ -44,5 +84,26 @@ namespace com.barghgir.plc.web.Services
             return environment;
         }
 
+        // TODO: figure out how to send notifications to present user with feedback like "successful" or "error" *******
+
+        public ApiOptions GetAppConfigAsync()
+        {
+            ApiOptions options = null;
+            try
+            {
+                var url = $"{BaseAddress}/configuration/app";
+                var response = HttpHelper.GetHttpClient().GetAsync(url).Result;
+
+                if (!response.IsSuccessStatusCode)
+                    throw new ApplicationException("Failed to get configuration");
+
+                options = response.Content.ReadFromJsonAsync<ApiOptions>().Result;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError("Failed to get config: {exceptionMessage}", ex.Message);
+            }
+            return options;
+        }
     }
 }

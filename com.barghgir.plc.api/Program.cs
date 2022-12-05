@@ -9,7 +9,6 @@ using Serilog.AspNetCore;
 using Serilog.Extensions.Hosting;
 using Serilog.Settings.Configuration;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");

@@ -1,5 +1,6 @@
 ﻿using com.barghgir.plc.data.Models;
 using com.barghgir.plc.web.Controls;
+using com.barghgir.plc.web.Helpers;
 using com.barghgir.plc.web.Services;
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,9 @@ public partial class CourseDetailViewModel : BaseViewModel
 
     partial void OnCourseChanged(Course value)
     {
-        Task.Run(() => this.GetCourseDetailAsync()).Wait();
+        Task.Run(async () => {
+            await this.GetCourseDetailAsync();
+        }).Wait();
     }
 
     [RelayCommand]
@@ -61,10 +64,11 @@ public partial class CourseDetailViewModel : BaseViewModel
         }
         catch (Exception ex)
         {
-            Debug.WriteLine($"Failed to get course detail. Error: {ex.Message}");
-            await Shell.Current.DisplayAlert("Error!",
-                $"Failed to get course detail: {ex.Message}", "OK");
-            throw;
+            var msg = "Failed to get course detail";
+            Debug.WriteLine($"{msg}: {ex.Message}");
+            //await Shell.Current.DisplayAlert("Error!",
+            //    $"Failed to get course detail: {ex.Message}", "OK");
+            await PresentationHelpers.Alert(msg);
         }
         finally
         {

@@ -20,8 +20,14 @@ public partial class CourseDetailPage : ContentPage
         //    viewModel.GetCourseDetailCommand.Execute(null);
     }
 
-    void OnContentPageUnloaded(object sender, EventArgs e)
+    protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
     {
+        base.OnNavigatedFrom(args);
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
         video.Handler?.DisconnectHandler();
     }
 }

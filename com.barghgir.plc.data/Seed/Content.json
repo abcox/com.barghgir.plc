@@ -9,7 +9,7 @@
     "id": 1,
     "title": "Comfort Fit - Sorry",
     "source": "https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Comfort_Fit_-_03_-_Sorry.mp3",
-    "durationSeconds": 0
+    "durationSeconds": 1000
   },
   {
     "id": 2,
@@ -37,8 +37,8 @@
   },
   {
     "id": 6,
-    "title": "Comfort Fit - Sorry",
-    "source": "https://s3.amazonaws.com/exp-us-standard/audio/playlist-example/Comfort_Fit_-_03_-_Sorry.mp3",
+    "title": "Popeye - I don't scare",
+    "source": "https://ia800501.us.archive.org/11/items/popeye_i_dont_scare/popeye_i_dont_scare_512kb.mp4",
     "durationSeconds": 0
   },
   {

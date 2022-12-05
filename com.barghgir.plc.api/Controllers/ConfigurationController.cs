@@ -9,14 +9,19 @@ namespace com.barghgir.plc.api.Controllers
     [Route("[controller]")]
     public class ConfigurationController : ControllerBase
     {
-        private readonly ILogger<ConfigurationController> logger;
         private readonly ApiOptions options;
+        private readonly ILogger<ConfigurationController> logger;
 
-        public ConfigurationController(ILogger<ConfigurationController> logger, IOptions<ApiOptions> options)
+        public ConfigurationController(
+            IOptions<ApiOptions> options,
+            ILogger<ConfigurationController> logger)
         {
             this.logger = logger;
 
-            if (options?.Value != null) { this.logger.LogWarning("Api config failure"); }
+            if (options?.Value == null)
+            {
+                this.logger.LogWarning("Api config failure");
+            }
             this.options = options?.Value ?? new ApiOptions { };
         }
 

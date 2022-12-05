@@ -8,7 +8,7 @@ public partial class AppShell : Shell
     {
         //{ "/", typeof(MainPage) },
         { nameof(CourseDetailPage), typeof(CourseDetailPage) },
-        { nameof(SignInPage), typeof(SignInPage) }
+        { nameof(SignInPage), typeof(SignInPage) },
     };
 
     public AppShell()

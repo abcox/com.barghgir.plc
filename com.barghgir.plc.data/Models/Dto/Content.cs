@@ -13,6 +13,7 @@ public class Content
     public string? Title { get; set; }
     public string? Source { get; set; }
     public int? DurationSeconds { get; set; }
+    public string? DurationDisplay { get; set; }
     public ContentType TypeId { get; set; } = ContentType.audio;
     [IgnoreDataMember]
     public int Index { get; set; }

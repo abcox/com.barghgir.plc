@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using CommunityToolkit.Maui.Core.Views;
+using com.barghgir.plc.web.Views;
 
 namespace com.barghgir.plc.web.ViewModels
 {
@@ -28,7 +30,7 @@ namespace com.barghgir.plc.web.ViewModels
             Title = "Courses";
             this.courseService = courseService;
 
-            Task.Run(() => this.GetCoursesAsync()).Wait();
+            Task.Run(() => GetCoursesAsync());
 
             isSignedIn = false; // todo: wire up state
         }
@@ -52,23 +54,10 @@ namespace com.barghgir.plc.web.ViewModels
             
             Console.WriteLine($"Going to course '{course.Title}'...");
 
-            await Shell.Current.GoToAsync($"CourseDetailPage",true,new Dictionary<string, object>
+            await Shell.Current.GoToAsync(nameof(CourseDetailPage),true,new Dictionary<string, object>
             {
                 {"Course", course}
             });
-        }
-
-        [RelayCommand]
-        async Task GoToAdminAsync()
-        {
-            await Shell.Current.DisplayAlert("TODO",
-                $"Implement {nameof(GoToAdminAsync)}", "OK");
-
-            //await Shell.Current.GoToAsync($"{nameof(GoToAdminAsync)}", true,
-            //    new Dictionary<string, object>
-            //    {
-            //        {"StateViewModel", null}
-            //    });
         }
 
         [RelayCommand]
@@ -81,22 +70,21 @@ namespace com.barghgir.plc.web.ViewModels
             try
             {
                 IsBusy = true;
-
-                var courses = await courseService.GetCourses();
-
+                var courses = await courseService.GetCoursesAsync();
                 if (Courses.Count > 0)
                     Courses.Clear();
-
                 Courses.CollectionChanged += (s, e) => Console.WriteLine("{0} changed", nameof(Courses));
                 Courses.InsertRange(courses);
-                Console.WriteLine("{0}.Count: {1}", nameof(Courses), Courses.Count);
+                await PresentationHelpers.Alert($"Loaded {Courses.Count} courses");
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Failed to get courses. Error: {ex.Message}");
-                await Shell.Current.DisplayAlert("Error!",
-                    $"Failed to get courses: {ex.Message}", "OK");
-                throw;
+                var msg = "Failed to get courses";
+                Debug.WriteLine($"{msg}: {ex.Message}");
+                //await Shell.Current.DisplayAlert("Error!",
+                //    $"Failed to get courses: {ex.Message}", "OK");
+                await PresentationHelpers.Alert(msg);
+                //throw;
             }
             finally
             {
