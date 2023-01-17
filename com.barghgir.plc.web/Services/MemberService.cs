@@ -18,12 +18,14 @@ namespace com.barghgir.plc.web.Services
     public class MemberService : BaseService
     {
         private readonly ILogger<MemberService> logger;
+        private readonly HttpClient httpClient;
 
         public MemberService(
             IConfigurationService configurationService,
             ILogger<MemberService> logger) : base(configurationService)
         {
             this.logger = logger;
+            this.httpClient = HttpHelper.GetHttpClient();
         }
 
         //public static async Task<string> BaseAddress() =>
@@ -50,7 +52,7 @@ namespace com.barghgir.plc.web.Services
                     password = protectedPassword
                 });
                 HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                var response = await HttpHelper.GetHttpClient().PostAsync(url, null);
+                var response = await httpClient.PostAsync(url, null);
 
                 if (!response.IsSuccessStatusCode)
                 {
@@ -65,6 +67,17 @@ namespace com.barghgir.plc.web.Services
                 logger.LogError("{method} raised exception: {exception}", nameof(SignIn), ex);
             }
             return token;
+        }
+
+        public async Task<List<Member>> GetMemberListAsync()
+        {
+            var url = $"{BaseAddress}/community/admin/member/list"; // "https://10.0.2.2:5001/course/list";
+            Console.WriteLine($"GET {url}");
+            var response = await httpClient.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+                throw new ApplicationException($"{nameof(GetMemberListAsync)} ERROR: {response.ReasonPhrase}");
+            var result = await response.Content.ReadFromJsonAsync<List<Member>>();
+            return result;
         }
     }
 }

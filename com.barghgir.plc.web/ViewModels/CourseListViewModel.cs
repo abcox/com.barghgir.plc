@@ -30,9 +30,14 @@ namespace com.barghgir.plc.web.ViewModels
             Title = "Courses";
             this.courseService = courseService;
 
-            Task.Run(() => GetCoursesAsync());
+            Task.Run(async () => {
+                await GetCoursesAsync();
+            });
 
             isSignedIn = false; // todo: wire up state
+#if DEBUG
+            IsAdmin = true;
+#endif
         }
 
         [ObservableProperty]
@@ -56,8 +61,37 @@ namespace com.barghgir.plc.web.ViewModels
 
             await Shell.Current.GoToAsync(nameof(CourseDetailPage),true,new Dictionary<string, object>
             {
-                {"Course", course}
+                {nameof(Course), course}
             });
+        }
+
+        [RelayCommand]
+        async Task GoToCourseListEditAsync(Course course)
+        {
+            //await Shell.Current.DisplayAlert("TODO",
+            //    $"Implement {nameof(GoToAdminAsync)}", "OK");
+
+            await PresentationHelpers.Alert($"{(course == null ? "Add" : "Edit")} course");
+
+            await Shell.Current.GoToAsync(nameof(CourseListEditPage), true,
+                new Dictionary<string, object>
+                {
+                    {nameof(Course), course }
+                });
+        }
+
+        [RelayCommand]
+        async Task GoToAdminAsync(Course course)
+        {
+            //await Shell.Current.DisplayAlert("TODO",
+            //    $"Implement {nameof(GoToAdminAsync)}", "OK");
+            await PresentationHelpers.Alert($"Edit course Id: {course.Id}");
+
+            await Shell.Current.GoToAsync(nameof(AdminPage), true,
+                new Dictionary<string, object>
+                {
+                    {"StateViewModel", null}
+                });
         }
 
         [RelayCommand]

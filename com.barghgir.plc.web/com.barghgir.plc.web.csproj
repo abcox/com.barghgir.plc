@@ -85,12 +85,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\CourseListEditPage.xaml.cs">
+	    <DependentUpon>CourseListEditPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\CourseDetailPage.xaml.cs">
 	    <DependentUpon>CourseDetailPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\AdminPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\CourseListEditPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CourseDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

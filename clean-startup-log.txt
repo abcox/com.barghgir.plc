@@ -1,0 +1,626 @@
+Start debugging Android application ...
+'com.barghgir.plc.api.exe' (CoreCLR: DefaultDomain): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Private.CoreLib.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\com.barghgir.plc.api.dll'. Symbols loaded.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\SDK\6.0.403\DotnetTools\dotnet-watch\6.0.403-servicing.22523.23\tools\net6.0\any\middleware\Microsoft.AspNetCore.Watch.BrowserRefresh.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Extensions\Microsoft\Web Tools\Browser Link\Microsoft.WebTools.BrowserLink.Net.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'c:\program files\microsoft visual studio\2022\professional\common7\ide\commonextensions\microsoft\hotreload\Microsoft.Extensions.DotNetDeltaApplier.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.IO.Pipes.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Collections.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.Overlapped.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.AccessControl.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Principal.Windows.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.InteropServices.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Claims.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\Microsoft.Win32.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.Loader.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\netstandard.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Http.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Collections.Concurrent.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Routing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ComponentModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Features.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\com.barghgir.plc.common.dll'. Symbols loaded.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Options.ConfigurationExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.Binder.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\com.barghgir.plc.data.dll'. Symbols loaded.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\com.barghgir.plc.infra.dll'. Symbols loaded.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.ApiExplorer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Hosting.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.StaticFiles.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.HttpsPolicy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Authorization.Policy.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Step into: Stepping over non-user code 'Program.<>c__DisplayClass0_0..ctor'
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.EnvironmentVariables.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.Kestrel.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.Kestrel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.Kestrel.Transport.Quic.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.Quic.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Diagnostics.Tracing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.IIS.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.IISIntegration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.CommandLine.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.FileProviders.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.FileProviders.Physical.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Resources.ResourceManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.FileExtensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.IO.FileSystem.Watcher.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ComponentModel.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.FileSystemGlobbing.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\System.Text.Json.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Text.Encoding.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+> am start -a "android.intent.action.MAIN" -c "android.intent.category.LAUNCHER" -n "com.companyname.com.barghgir.plc.web/crc64b355dc89e6671017.MainActivity"
+> Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.com.barghgir.plc.web/crc64b355dc89e6671017.MainActivity }
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Numerics.Vectors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.CompilerServices.Unsafe.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Configuration.UserSecrets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.FileProviders.Composite.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Private.Uri.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\System.Text.Encodings.Web.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Reflection.Emit.Lightweight.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Reflection.Emit.ILGeneration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Reflection.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.Intrinsics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Logging.EventLog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Logging.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Logging.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Logging.Debug.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Logging.EventSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Diagnostics.DiagnosticSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Connections.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.HostFiltering.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.HttpOverrides.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Routing.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.ObjectPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ObjectModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Extensions.Logging.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Authentication.Core.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Authentication.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Authorization.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.Cors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Cors.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.DataAnnotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.OpenApi.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Authentication.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.DataProtection.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.DataProtection.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Cryptography.Internal.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.WebEncoders.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.Localization.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Mvc.Razor.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Settings.Configuration.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Buffers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.AspNetCore.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.AspNetCore.Plus.dll'. 
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Enrichers.Environment.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Exceptions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Formatting.Compact.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Sinks.Console.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Sinks.Debug.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Serilog.Sinks.File.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\SerilogTimings.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Text.RegularExpressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.IO.FileSystem.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.InteropServices.RuntimeInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/com.barghgir.plc.web.dll
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.Sockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.ThreadPool.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.Thread.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\System.IO.Pipelines.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Net.Http.Headers.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Http.Features.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ComponentModel.TypeConverter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Http.Extensions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ComponentModel.Annotations.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Metadata.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\Microsoft.Win32.Registry.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Xml.XDocument.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Private.Xml.Linq.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Private.Xml.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.IO.MemoryMappedFiles.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Diagnostics.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.Extensions.FileProviders.Embedded.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Linq.Expressions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.Diagnostics.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.Security.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.X509Certificates.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Collections.NonGeneric.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.Encoding.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.Cng.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.Algorithms.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Security.Cryptography.Csp.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.Tasks.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.Http.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.NameResolution.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.WebSockets.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Runtime.Serialization.Primitives.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+[arghgir.plc.web] Late-enabling -Xcheck:jni
+[arghgir.plc.web] Unexpected CPU variant for x86: x86_64.
+[arghgir.plc.web] Known variants: atom, sandybridge, silvermont, kabylake, default
+[CompatibilityChangeReporter] Compat change id reported: 171979766; UID 10157; state: ENABLED
+[ziparchive] Unable to open '/data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/base.dm': No such file or directory
+[ziparchive] Unable to open '/data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/base.dm': No such file or directory
+[GraphicsEnvironment] ANGLE Developer option for 'com.companyname.com.barghgir.plc.web' set to: 'default'
+[GraphicsEnvironment] ANGLE GameManagerService for com.companyname.com.barghgir.plc.web: false
+[GraphicsEnvironment] Neither updatable production driver nor prerelease driver is supported.
+[NetworkSecurityConfig] Using Network Security Config from resource network_security_config debugBuild: true
+[NetworkSecurityConfig] Using Network Security Config from resource network_security_config debugBuild: true
+[debug-app-helper] Checking if libmonodroid was unpacked to /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64/libmonodroid.so
+[debug-app-helper] Native libs extracted to /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64, assuming application/android:extractNativeLibs == true
+[debug-app-helper] Setting up for DSO lookup in app data directories
+[debug-app-helper] Added filesystem DSO lookup location: /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64
+[debug-app-helper] Using runtime path: /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64
+[debug-app-helper] checking directory: `/data/user/0/com.companyname.com.barghgir.plc.web/files/.__override__/lib`
+[debug-app-helper] directory does not exist: `/data/user/0/com.companyname.com.barghgir.plc.web/files/.__override__/lib`
+[debug-app-helper] Checking whether Mono runtime exists at: /data/user/0/com.companyname.com.barghgir.plc.web/files/.__override__/libmonosgen-2.0.so
+[debug-app-helper] Checking whether Mono runtime exists at: /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64/libmonosgen-2.0.so
+[debug-app-helper] Mono runtime found at: /data/app/~~pyDAMd76h3NroelvulaKVw==/com.companyname.com.barghgir.plc.web-5Kg5f5URJVFopUHrDs7PaA==/lib/x86_64/libmonosgen-2.0.so
+[arghgir.plc.web] Attempt to remove non-JNI local reference, dumping thread
+[DOTNET] JNI_OnLoad: JNI_OnLoad in pal_jni.c
+[monodroid] Creating public update directory: `/data/user/0/com.companyname.com.barghgir.plc.web/files/.__override__`
+[arghgir.plc.web] Attempt to remove non-JNI local reference, dumping thread
+[monodroid-debug] Trying to initialize the debugger with options: --debugger-agent=transport=dt_socket,loglevel=0,address=10.0.2.2:53267,embedding=1
+[monodroid-assembly] open_from_bundles: failed to load assembly com.barghgir.plc.web.dll
+[monodroid-gc] GREF GC Threshold: 46080
+[monodroid-assembly] open_from_bundles: failed to load assembly Mono.Android.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Java.Interop.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Collections.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Mono.Android.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Java.Interop.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Collections.dll [External]
+Resolved pending breakpoint for 'Android.Runtime.JNIEnv.RegisterJniNatives(System.IntPtr, System.Int32, System.IntPtr, System.IntPtr, System.Int32)' to /Users/runner/work/1/s/xamarin-android/src/Mono.Android/Android.Runtime/JNIEnv.cs:124 [0x00000].
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Threading.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Threading.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.InteropServices.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.InteropServices.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Threading.Thread.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Diagnostics.StackTrace.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Threading.Thread.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Diagnostics.StackTrace.dll [External]
+[arghgir.plc.web] Attempt to remove non-JNI local reference, dumping thread
+Loaded assembly: data-0x738eb7d90050 [External]
+Loaded assembly: data-0x738eb7d80040 [External]
+Loaded assembly: data-0x738f7a8e8e70 [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly netstandard.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/netstandard.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Linq.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Linq.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.VisualStudio.DesignTools.TapContract.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.VisualStudio.DesignTools.TapContract.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.HotReload.Contracts.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.HotReload.Contracts.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Collections.Concurrent.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Collections.Concurrent.dll [External]
+Resolved pending breakpoint for 'Xamarin.HotReload.HotReloadAgent.BreakpointSendToIde(System.String)' to D:\a\_work\1\s\HotReload\Source\Xamarin.HotReload.Agent\HotReloadAgent.cs:423 [0x00000].
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Text.Json.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Text.Json.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Text.Encodings.Web.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Text.Encodings.Web.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.ComponentModel.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.ComponentModel.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.Controls.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.HotReload.Contracts.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.HotReload.Contracts.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.Controls.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.VisualStudio.DesignTools.TapContract.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.VisualStudio.DesignTools.TapContract.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.ObjectModel.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.ObjectModel.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.Graphics.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.Essentials.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Logging.Abstractions.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.Graphics.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.Essentials.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Logging.Abstractions.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.ComponentModel.TypeConverter.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.ComponentModel.TypeConverter.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Private.Uri.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Private.Uri.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Loader.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Loader.dll [External]
+Resolved pending breakpoint for 'Xamarin.HotReload.HotReloadAgent.BreakpointCheckpoint()' to D:\a\_work\1\s\HotReload\Source\Xamarin.HotReload.Agent\HotReloadAgent.cs:418 [0x00000].
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Memory.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Memory.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Reflection.Emit.Lightweight.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Reflection.Emit.ILGeneration.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Reflection.Primitives.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Reflection.Emit.Lightweight.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Reflection.Emit.ILGeneration.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Reflection.Primitives.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.CompilerServices.Unsafe.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.CompilerServices.Unsafe.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Core.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Core.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.DependencyInjection.Abstractions.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.Controls.Xaml.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly CommunityToolkit.Maui.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly CommunityToolkit.Maui.Core.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly MauiIcons.Material.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Configuration.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Configuration.Abstractions.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Logging.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly CommunityToolkit.Mvvm.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.AspNetCore.DataProtection.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.Controls.Xaml.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/CommunityToolkit.Maui.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/CommunityToolkit.Maui.Core.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/MauiIcons.Material.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Configuration.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Configuration.Abstractions.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Logging.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/CommunityToolkit.Mvvm.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.AspNetCore.DataProtection.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.AppCompat.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.Google.Android.Material.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.SwipeRefreshLayout.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.AppCompat.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.Google.Android.Material.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.SwipeRefreshLayout.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Fragment.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Activity.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Lifecycle.ViewModel.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Lifecycle.Common.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.SavedState.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Fragment.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Activity.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Lifecycle.ViewModel.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Lifecycle.Common.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.SavedState.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.DrawerLayout.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.CustomView.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Navigation.Runtime.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.DrawerLayout.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.CustomView.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Navigation.Runtime.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Net.Primitives.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Net.Primitives.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly com.barghgir.plc.data.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/com.barghgir.plc.data.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly com.barghgir.plc.common.dll
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App\6.0.11\Microsoft.AspNetCore.WebUtilities.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Net.Http.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/com.barghgir.plc.common.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Net.Http.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Options.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Options.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.AspNetCore.Cryptography.Internal.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.AspNetCore.DataProtection.Abstractions.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.Hosting.Abstractions.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.AspNetCore.Cryptography.Internal.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.AspNetCore.DataProtection.Abstractions.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.Hosting.Abstractions.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Xml.XDocument.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Private.Xml.Linq.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Xml.XDocument.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Private.Xml.Linq.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Extensions.DependencyInjection.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Extensions.DependencyInjection.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Diagnostics.Tracing.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Diagnostics.Tracing.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Xml.ReaderWriter.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Private.Xml.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Xml.ReaderWriter.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Private.Xml.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Text.Encoding.Extensions.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Text.Encoding.Extensions.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Text.RegularExpressions.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Text.RegularExpressions.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Numerics.Vectors.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Numerics.Vectors.dll [External]
+[arghgir.plc.web] Explicit concurrent copying GC freed 577(70KB) AllocSpace objects, 0(0B) LOS objects, 24% free, 1945KB/2594KB, paused 328us,43us total 2.704ms
+Thread started:  #2
+Thread started:  #3
+Thread started:  #4
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Serialization.Json.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Private.DataContractSerialization.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Serialization.Xml.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Serialization.Json.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Private.DataContractSerialization.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Serialization.Xml.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Serialization.Primitives.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Serialization.Primitives.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.RecyclerView.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.CardView.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.RecyclerView.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.CardView.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.CoordinatorLayout.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.CoordinatorLayout.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Loader.dll
+[libEGL] loaded /vendor/lib64/egl/libEGL_emulation.so
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Loader.dll [External]
+[libEGL] loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+[libEGL] loaded /vendor/lib64/egl/libGLESv2_emulation.so
+[monodroid-assembly] open_from_bundles: failed to load assembly MauiIcons.Core.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly Microsoft.Maui.Controls.Compatibility.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/MauiIcons.Core.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Microsoft.Maui.Controls.Compatibility.dll [External]
+[WindowOnBackDispatcher] App: com.companyname.com.barghgir.plc.web featureFlagEnabled=true appRequestsPredictiveBack=false alwaysEnforce=false
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Lifecycle.LiveData.Core.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Lifecycle.LiveData.Core.dll [External]
+[arghgir.plc.web] Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (unsupported, reflection, allowed)
+[arghgir.plc.web] Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (unsupported, reflection, allowed)
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.ViewPager2.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.ViewPager2.dll [External]
+[CompatibilityChangeReporter] Compat change id reported: 171228096; UID 10157; state: ENABLED
+[TabLayout] MODE_SCROLLABLE + GRAVITY_FILL is not supported, GRAVITY_START will be used instead
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.Lifecycle.Runtime.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.Lifecycle.Runtime.dll [External]
+[CompatibilityChangeReporter] Compat change id reported: 210923482; UID 10157; state: DISABLED
+[CompatibilityChangeReporter] Compat change id reported: 37756858; UID 10157; state: ENABLED
+[monodroid-assembly] open_from_bundles: failed to load assembly Xamarin.AndroidX.ViewPager.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/Xamarin.AndroidX.ViewPager.dll [External]
+Resolved pending breakpoint at 'ConfigurationService.cs:31,1' to void com.barghgir.plc.web.Services.ConfigurationService..ctor (Microsoft.Extensions.Logging.ILogger<com.barghgir.plc.web.Services.ConfigurationService> logger) [0x0001a].
+Resolved pending breakpoint at 'CourseService.cs:23,1' to void com.barghgir.plc.web.Services.CourseService..ctor (com.barghgir.plc.web.Services.IConfigurationService configurationService, Microsoft.Extensions.Logging.ILogger<com.barghgir.plc.web.Services.CourseService> logger) [0x00008].
+Resolved pending breakpoint at 'ConfigurationService.cs:82,1' to void com.barghgir.plc.web.Services.ConfigurationService.<GetEnvironment>d__11.MoveNext () [0x00123].
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Intrinsics.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Intrinsics.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Security.Cryptography.X509Certificates.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Collections.NonGeneric.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Security.Cryptography.X509Certificates.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Collections.NonGeneric.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Net.Requests.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Net.Requests.dll [External]
+Thread started: <Thread Pool> #5
+Thread started: .NET ThreadPool Gate #6
+Thread started: <Thread Pool> #7
+Thread started: <Thread Pool> #8
+Thread started: <Thread Pool> #9
+Resolved pending breakpoint at 'CourseListViewModel.cs:108,1' to void com.barghgir.plc.web.ViewModels.CourseListViewModel.<GetCoursesAsync>d__15.MoveNext () [0x000e7].
+Resolved pending breakpoint at 'CourseListViewModel.cs:116,1' to void com.barghgir.plc.web.ViewModels.CourseListViewModel.<GetCoursesAsync>d__15.MoveNext () [0x00247].
+Resolved pending breakpoint at 'CourseListViewModel.cs:107,1' to void com.barghgir.plc.web.ViewModels.CourseListViewModel.<GetCoursesAsync>d__15.MoveNext () [0x00065].
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Console.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Net.Http.Json.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Console.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Net.Http.Json.dll [External]
+[monodroid-assembly] Shared library 'liblog' not loaded, p/invoke '__android_log_print' may fail
+[DOTNET] Getting course list from url https://192.168.2.53:45455/course/list
+Thread started: .NET Timers #10
+[monodroid-assembly] open_from_bundles: failed to load assembly mscorlib.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/mscorlib.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.dll [External]
+[arghgir.plc.web] Explicit concurrent copying GC freed 654(119KB) AllocSpace objects, 0(0B) LOS objects, 24% free, 3014KB/4018KB, paused 279us,46us total 4.793ms
+[TrafficStats] tagSocket(72) with statsTag=0xffffffff, statsUid=-1
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Security.Cryptography.Encoding.dll
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Security.Cryptography.Primitives.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Security.Cryptography.Encoding.dll [External]
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Security.Cryptography.Primitives.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Security.Cryptography.Algorithms.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Security.Cryptography.Algorithms.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Formats.Asn1.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Formats.Asn1.dll [External]
+[monodroid-assembly] open_from_bundles: failed to load assembly System.Runtime.Numerics.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.Runtime.Numerics.dll [External]
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Collections.Immutable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Data.Common.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Transactions.Local.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+[OnBackInvokedDispatcher] ViewRootImpl.registerBackCallbackOnWindow. Dispatcher:android.window.WindowOnBackInvokedDispatcher@f572f06 Package:com.companyname.com.barghgir.plc.web IWindow:android.view.ViewRootImpl$W@d1709c7 Session:android.view.IWindowSession$Stub$Proxy@eb3fbf4
+[WindowOnBackDispatcher] App: com.companyname.com.barghgir.plc.web featureFlagEnabled=true appRequestsPredictiveBack=false alwaysEnforce=false
+[OnBackInvokedDispatcher] Proxy setActual android.window.WindowOnBackInvokedDispatcher@f572f06. Current null
+[OnBackInvokedDispatcher] Proxy transferring 0 callbacks to android.window.WindowOnBackInvokedDispatcher@f572f06
+[HostConnection] createUnique: call
+[HostConnection] HostConnection::get() New Host Connection established 0x738d47d5e510, tid 25649
+[HostConnection] HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2 
+[OpenGLRenderer] Failed to initialize 101010-2 format, error = EGL_SUCCESS
+[EGL_emulation] eglCreateContext: 0x738d47d5de50: maj 2 min 0 rcv 2
+[EGL_emulation] eglMakeCurrent: 0x738d47d5de50: ver 2 0 (tinfo 0x738f77584080) (first time)
+[Gralloc4] mapper 4.x is not supported
+[HostConnection] createUnique: call
+[HostConnection] HostConnection::get() New Host Connection established 0x738d47d5ee10, tid 25649
+[goldfish-address-space] allocate: Ask for block of size 0x100
+[goldfish-address-space] allocate: ioctl allocate returned offset 0x3f1ffc000 size 0x2000
+[Gralloc4] allocator 4.x is not supported
+[HostConnection] HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_YUV_Cache ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_sync_buffer_data ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_multi_configs GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_2 
+[arghgir.plc.web] Background young concurrent copying GC freed 3382(369KB) AllocSpace objects, 0(0B) LOS objects, 41% free, 3544KB/6028KB, paused 8.387ms,46us total 13.355ms
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.NetworkInformation.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+[CustomViewTarget] Glide treats LayoutParams.WRAP_CONTENT as a request for an image the size of this device's screen dimensions. If you want to load the original image and are ok with the corresponding memory cost and OOMs (depending on the input size), use .override(Target.SIZE_ORIGINAL). Otherwise, use LayoutParams.MATCH_PARENT, set layout_width and layout_height to fixed dimension, or use .override() with fixed dimensions.
+[CustomViewTarget] Glide treats LayoutParams.WRAP_CONTENT as a request for an image the size of this device's screen dimensions. If you want to load the original image and are ok with the corresponding memory cost and OOMs (depending on the input size), use .override(Target.SIZE_ORIGINAL). Otherwise, use LayoutParams.MATCH_PARENT, set layout_width and layout_height to fixed dimension, or use .override() with fixed dimensions.
+[Parcel] Expecting binder but got null!
+[Choreographer] Skipped 42 frames!  The application may be doing too much work on its main thread.
+[OpenGLRenderer] Davey! duration=734ms; Flags=1, FrameTimelineVsyncId=416188, IntendedVsync=220460016410764, Vsync=220460016410764, InputEventId=0, HandleInputStart=220460017699340, AnimationStart=220460017742040, PerformTraversalsStart=220460017773040, DrawStart=220460337710940, FrameDeadline=220460033077430, FrameInterval=220460017665140, FrameStartTime=16666666, SyncQueued=220460350260440, SyncStart=220460350598140, IssueDrawCommandsStart=220460351857340, SwapBuffers=220460640660040, FrameCompleted=220460751313540, DequeueBufferDuration=33500, QueueBufferDuration=366900, GpuCompleted=220460751313540, SwapBuffersCompleted=220460739618640, DisplayPresentTime=549755813888, 
+[OpenGLRenderer] Davey! duration=735ms; Flags=0, FrameTimelineVsyncId=416203, IntendedVsync=220460033077430, Vsync=220460733077402, InputEventId=0, HandleInputStart=220460743202940, AnimationStart=220460743222740, PerformTraversalsStart=220460743447440, DrawStart=220460743924040, FrameDeadline=220460066410762, FrameInterval=220460743075840, FrameStartTime=16666666, SyncQueued=220460744213040, SyncStart=220460744358840, IssueDrawCommandsStart=220460744566740, SwapBuffers=220460745710640, FrameCompleted=220460768425240, DequeueBufferDuration=29200, QueueBufferDuration=570200, GpuCompleted=220460768425240, SwapBuffersCompleted=220460756358340, DisplayPresentTime=127054678797408, 
+[Glide] Load failed for nodata.png with size [2274x2274]
+[Glide] class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+[Glide] There were 3 root causes:
+[Glide] java.io.FileNotFoundException(/nodata.png: open failed: ENOENT (No such file or directory))
+[Glide] java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+[Glide] java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]   Cause (1 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class java.io.InputStream, LOCAL
+[Glide] There was 1 root cause:
+[Glide] java.io.FileNotFoundException(/nodata.png: open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]     Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+[Glide] There was 1 root cause:
+[Glide] java.io.FileNotFoundException(/nodata.png: open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]       Cause (1 of 1): class java.io.FileNotFoundException: /nodata.png: open failed: ENOENT (No such file or directory)
+[Glide]   Cause (2 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class android.os.ParcelFileDescriptor, LOCAL
+[Glide] There was 1 root cause:
+[Glide] java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]     Cause (1 of 1): class com.bumptech.glide.load.engine.GlideException: Fetch failed
+[Glide] There was 1 root cause:
+[Glide] java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]       Cause (1 of 1): class java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+[Glide]   Cause (3 of 3): class com.bumptech.glide.load.engine.GlideException: Fetching data failed, class android.content.res.AssetFileDescriptor, LOCAL
+[Glide] There was 1 root cause:
+[Glide] java.io.FileNotFoundException(open failed: ENOENT (No such file or directory))
+[Glide]  call GlideException#logRootCauses(String) for more detail
+[Glide]     Cause (1 of 1): class java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+[Glide] Root cause (1 of 3)
+[Glide] java.io.FileNotFoundException: /nodata.png: open failed: ENOENT (No such file or directory)
+[Glide] 	at libcore.io.IoBridge.open(IoBridge.java:574)
+[Glide] 	at java.io.FileInputStream.<init>(FileInputStream.java:160)
+[Glide] 	at java.io.FileInputStream.<init>(FileInputStream.java:115)
+[Glide] 	at android.content.ContentResolver.openInputStream(ContentResolver.java:1516)
+[Glide] 	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResourceFromUri(StreamLocalUriFetcher.java:74)
+[Glide] 	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:50)
+[Glide] 	at com.bumptech.glide.load.data.StreamLocalUriFetcher.loadResource(StreamLocalUriFetcher.java:13)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+[Glide] 	at java.lang.Thread.run(Thread.java:1012)
+[Glide] 	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:393)
+[Glide] Caused by: android.system.ErrnoException: open failed: ENOENT (No such file or directory)
+[Glide] 	at libcore.io.Linux.open(Native Method)
+[Glide] 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+[Glide] 	at libcore.io.BlockGuardOs.open(BlockGuardOs.java:274)
+[Glide] 	at libcore.io.ForwardingOs.open(ForwardingOs.java:563)
+[Glide] 	at android.app.ActivityThread$AndroidOs.open(ActivityThread.java:7778)
+[Glide] 	at libcore.io.IoBridge.open(IoBridge.java:560)
+[Glide] 	... 17 more
+[Glide] Root cause (2 of 3)
+[Glide] java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+[Glide] 	at android.os.ParcelFileDescriptor.openInternal(ParcelFileDescriptor.java:342)
+[Glide] 	at android.os.ParcelFileDescriptor.open(ParcelFileDescriptor.java:229)
+[Glide] 	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1837)
+[Glide] 	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1758)
+[Glide] 	at com.bumptech.glide.load.data.FileDescriptorLocalUriFetcher.loadResource(FileDescriptorLocalUriFetcher.java:20)
+[Glide] 	at com.bumptech.glide.load.data.FileDescriptorLocalUriFetcher.loadResource(FileDescriptorLocalUriFetcher.java:12)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:412)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:160)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:83)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+[Glide] 	at java.lang.Thread.run(Thread.java:1012)
+[Glide] 	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:393)
+[Glide] Root cause (3 of 3)
+[Glide] java.io.FileNotFoundException: open failed: ENOENT (No such file or directory)
+[Glide] 	at android.os.ParcelFileDescriptor.openInternal(ParcelFileDescriptor.java:342)
+[Glide] 	at android.os.ParcelFileDescriptor.open(ParcelFileDescriptor.java:229)
+[Glide] 	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1837)
+[Glide] 	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java:1758)
+[Glide] 	at com.bumptech.glide.load.data.AssetFileDescriptorLocalUriFetcher.loadResource(AssetFileDescriptorLocalUriFetcher.java:20)
+[Glide] 	at com.bumptech.glide.load.data.AssetFileDescriptorLocalUriFetcher.loadResource(AssetFileDescriptorLocalUriFetcher.java:11)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:44)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:412)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:160)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:83)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.onDataFetcherFailed(DecodeJob.java:412)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.onLoadFailedInternal(SourceGenerator.java:160)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator$1.onLoadFailed(SourceGenerator.java:83)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.startNextOrFail(MultiModelLoader.java:167)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.onLoadFailed(MultiModelLoader.java:154)
+[Glide] 	at com.bumptech.glide.load.data.LocalUriFetcher.loadData(LocalUriFetcher.java:50)
+[Glide] 	at com.bumptech.glide.load.model.MultiModelLoader$MultiFetcher.loadData(MultiModelLoader.java:100)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNextLoad(SourceGenerator.java:70)
+[Glide] 	at com.bumptech.glide.load.engine.SourceGenerator.startNext(SourceGenerator.java:63)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runGenerators(DecodeJob.java:311)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.runWrapped(DecodeJob.java:280)
+[Glide] 	at com.bumptech.glide.load.engine.DecodeJob.run(DecodeJob.java:235)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1137)
+[Glide] 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:637)
+[Glide] 	at java.lang.Thread.run(Thread.java:1012)
+[Glide] 	at com.bumptech.glide.load.engine.executor.GlideExecutor$DefaultThreadFactory$1.run(GlideExecutor.java:393)
+[CustomViewTarget] Glide treats LayoutParams.WRAP_CONTENT as a request for an image the size of this device's screen dimensions. If you want to load the original image and are ok with the corresponding memory cost and OOMs (depending on the input size), use .override(Target.SIZE_ORIGINAL). Otherwise, use LayoutParams.MATCH_PARENT, set layout_width and layout_height to fixed dimension, or use .override() with fixed dimensions.
+[CustomViewTarget] Glide treats LayoutParams.WRAP_CONTENT as a request for an image the size of this device's screen dimensions. If you want to load the original image and are ok with the corresponding memory cost and OOMs (depending on the input size), use .override(Target.SIZE_ORIGINAL). Otherwise, use LayoutParams.MATCH_PARENT, set layout_width and layout_height to fixed dimension, or use .override() with fixed dimensions.
+[Glide] Load failed for crc6488302ad6e9e4df1a.ImageLoaderCallback@e7c827c with size [2274x2274]
+[Glide] class com.bumptech.glide.load.engine.GlideException: Failed to load resource
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Linq.Queryable.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Threading.Timer.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Diagnostics.StackTrace.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Diagnostics.Process.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Xml.ReaderWriter.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Collections.Specialized.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Net.WebClient.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.ComponentModel.EventBasedAsync.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\Microsoft.Identity.Client.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\bin\Debug\net6.0\System.Security.Permissions.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Text.Encoding.CodePages.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+'com.barghgir.plc.api.exe' (CoreCLR: clrhost): Loaded 'C:\Program Files\dotnet\shared\Microsoft.NETCore.App\6.0.11\System.Diagnostics.TraceSource.dll'. Skipped loading symbols. Module is optimized and the debugger option 'Just My Code' is enabled.
+[EGL_emulation] app_time_stats: avg=7.12ms min=2.76ms max=47.70ms count=53
+[monodroid-assembly] open_from_bundles: failed to load assembly System.IO.Compression.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.IO.Compression.dll [External]
+[DOTNET] Courses changed
+[monodroid-assembly] open_from_bundles: failed to load assembly System.ComponentModel.Primitives.dll
+Loaded assembly: /data/data/com.companyname.com.barghgir.plc.web/files/.__override__/System.ComponentModel.Primitives.dll [External]
+[CompatibilityChangeReporter] Compat change id reported: 147798919; UID 10157; state: ENABLED
+[0:] Failed to get courses: Can't toast on a thread that has not called Looper.prepare()
+[arghgir.plc.web] Explicit concurrent copying GC freed 3977(312KB) AllocSpace objects, 2(264KB) LOS objects, 49% free, 4822KB/9645KB, paused 286us,50us total 13.456ms
+[EGL_emulation] app_time_stats: avg=11.25ms min=2.98ms max=31.07ms count=59
+Thread started: <Thread Pool> #11
+[arghgir.plc.web] Explicit concurrent copying GC freed 2706(270KB) AllocSpace objects, 7(476KB) LOS objects, 49% free, 4885KB/9771KB, paused 295us,43us total 7.307ms
+The thread 0xaf8c has exited with code 0 (0x0).
+The thread 0x2a50 has exited with code 0 (0x0).

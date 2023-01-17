@@ -31,7 +31,11 @@ public static class MauiProgram
 		// Course
         builder.Services.AddTransient<CourseDetailPage>();
         builder.Services.AddTransient<CourseDetailViewModel>();
+
         builder.Services.AddSingleton<CourseListViewModel>(); // Main page
+
+        builder.Services.AddTransient<CourseListEditPage>();
+        builder.Services.AddSingleton<CourseListEditViewModel>();
 
         builder.Services.AddSingleton<CourseService>();
         builder.Services.AddSingleton<MemberService>(); // has SignIn
@@ -40,6 +44,8 @@ public static class MauiProgram
 		builder.Services.AddSingleton<DataProtectionService>();
 
         // General
+        builder.Services.AddSingleton<AdminPage>();
+        builder.Services.AddSingleton<AdminViewModel>();
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<SignInPage>();
         builder.Services.AddSingleton<SignInViewModel>();

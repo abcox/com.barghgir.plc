@@ -18,15 +18,12 @@ public partial class Course
 
     public int? ImageId { get; set; }
 
+    [NotMapped]
+    public string? ImageUrl { get; set; }
+
     public int? ContentTypeId { get; set; }
 
     public virtual ICollection<CourseContent> CourseContents { get; } = new List<CourseContent>();
 
-    [NotMapped]
-    public List<Models.Content> Content { get; set; } // temporary
-
-    public static implicit operator Course(Models.Course v)
-    {
-        throw new NotImplementedException();
-    }
+    public virtual IQueryable<Content> Content => CourseContents.Where(x => x.CourseId.Equals(this.Id)).Select(x => x.Content).AsQueryable();
 }

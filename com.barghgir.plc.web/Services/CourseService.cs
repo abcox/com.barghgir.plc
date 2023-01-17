@@ -15,8 +15,6 @@ namespace com.barghgir.plc.web.Services
     public class CourseService : BaseService
     {
         HttpClient httpClient;
-        List<Course> courseList = new();
-        Course courseDetail = new();
         private readonly ILogger<CourseService> logger;
 
         public CourseService(
@@ -34,8 +32,8 @@ namespace com.barghgir.plc.web.Services
             var response = await httpClient.GetAsync(url);
             if (!response.IsSuccessStatusCode)
                 throw new ApplicationException($"{nameof(GetCourseDetailAsync)} failed: {response.ReasonPhrase}");
-            courseDetail = await response.Content.ReadFromJsonAsync<Course>();
-            return courseDetail;
+            var result = await response.Content.ReadFromJsonAsync<Course>();
+            return result;
         }
 
         public async Task<List<Course>> GetCoursesAsync()
@@ -45,8 +43,8 @@ namespace com.barghgir.plc.web.Services
             var response = await httpClient.GetAsync(url);
             if (!response.IsSuccessStatusCode)
                 throw new ApplicationException($"{nameof(GetCoursesAsync)} failed: {response.ReasonPhrase}");
-            courseList = await response.Content.ReadFromJsonAsync<List<Course>>();
-            return courseList;
+            var result = await response.Content.ReadFromJsonAsync<List<Course>>();
+            return result;
         }
     }
 }

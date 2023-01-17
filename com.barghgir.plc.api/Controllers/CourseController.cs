@@ -6,6 +6,8 @@ using com.barghgir.plc.data.Models;
 using Context = com.barghgir.plc.data.Context;
 using System.Linq;
 using com.barghgir.plc.common.Extensions;
+using Microsoft.EntityFrameworkCore;
+using Azure;
 
 namespace com.barghgir.plc.api.Controllers;
 
@@ -86,6 +88,41 @@ public class CourseController : ControllerBase
     [ProducesResponseType(typeof(Course), StatusCodes.Status200OK)]
     [Route("{id}/detail", Name = "GetCourseDetail")]
     public IActionResult GetDetail(int id)
+    {
+        Course? response = null;
+
+        try
+        {
+            var course = dbContext.Courses
+                .Include(x => x.CourseContents)
+                .ThenInclude(x => x.Content)
+                .FirstOrDefault(x => x.Id.Equals(id));
+
+            if (course == null)
+            {
+                logger.LogWarning($"Course not found for id {id}");
+                return BadRequest();
+            }
+
+            response = new Course(course)
+            {
+                Content = course.CourseContents.OrderBy(x => x.SortOrder ?? course.CourseContents.Count).Select(x => data.Models.Content.GetContent(x.Content)).ToList(),
+                ImageUrl = $"{options.Images.SourceUrl}/{course.ImageId}/{options.Images.DetailBackgroundSize.WidthPx}/{options.Images.DetailBackgroundSize.HeightPx}"
+            };
+            var i = 1;
+            response.Content.ToList().ForEach(x => x.Index = i++);
+        }
+        catch (Exception ex)
+        {
+            logger.LogError("Something exceptional happened. {exceptionMessage}", ex.Message);
+        }
+        return Ok(response);
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(Course), StatusCodes.Status200OK)]
+    [Route("{id}/detailFromJsonTestFiles", Name = "GetDetailFromJsonTestFiles")]
+    public IActionResult GetDetailFromJsonTestFiles(int id)
     {
         Course? course = null;
         //await SqlHelper.SeedTablesFromJsonFiles();

@@ -8,6 +8,7 @@ using Serilog;
 using Serilog.AspNetCore;
 using Serilog.Extensions.Hosting;
 using Serilog.Settings.Configuration;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +28,8 @@ services.AddOptions<ApiOptions>().BindConfiguration(""); // reads the whole apps
 // Add services to the container.
 services.AddDbContext<CcaDevContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString(nameof(CcaDevContext))));
 services.AddTransient<IJwtTokenGenerator, JwtTokenGenerator>();
-services.AddControllers();
+services.AddControllers()
+    .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();

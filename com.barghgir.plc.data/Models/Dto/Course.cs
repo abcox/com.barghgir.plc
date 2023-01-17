@@ -17,7 +17,7 @@ public class Course
         this.Subtitle = course.Subtitle;
         this.Title = course.Title;
         this.Category = course.Category;
-        this.Content = course.Content;
+        //this.Content = course.Content;
         this.ContentType = course.ContentTypeId == 1 ?
             new ContentType(1, "Audio") : new ContentType(2, "Video");
     }
@@ -30,5 +30,5 @@ public class Course
     public string? ImageUrl { get; set; }
     public int ContentTypeId { get; set; }
     public ContentType? ContentType { get; set; }
-    public List<Content>? Content { get; set; }
+    public ICollection<Content>? Content { get; set; }
 }

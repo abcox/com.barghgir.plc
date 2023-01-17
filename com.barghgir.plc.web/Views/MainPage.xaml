@@ -27,12 +27,18 @@
                          Command="{Binding GoToAdminCommand}"
                          MaximumHeightRequest="30"
                          MaximumWidthRequest="30"/>
+            <ImageButton IsVisible="{Binding IsAdmin}"
+                         Margin="10,0,0,0"
+                         Source="{DynamicResource add}"
+                         Command="{Binding GoToCourseListEditCommand}"
+                         MaximumHeightRequest="30"
+                         MaximumWidthRequest="30"/>
             <Button Command="{Binding GoToSignInCommand}"
                     Text="{Binding SignInOutText}"
                     TextColor="White"
                     FontSize="Small"
                     FontAttributes="Bold"
-                    Margin="50,5,20,5"
+                    Margin="20,5,20,5"
                     BorderWidth="1"
                     BorderColor="White"
                     CornerRadius="20"
@@ -49,6 +55,7 @@
             <!-- https://fonts.google.com/icons?selected=Material+Icons -->
             <x:String x:Key="autorenew">baseline_autorenew_white_24dp.png</x:String>
             <x:String x:Key="settings">baseline_settings_white_24dp.png</x:String>
+            <x:String x:Key="add">plus_circle_outline_white_36dp.png</x:String>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.ToolbarItems>
@@ -116,8 +123,8 @@
                                 </Border.StrokeShape>
                                 <Border.GestureRecognizers>
                                     <TapGestureRecognizer
-                                                Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
-                                                CommandParameter="{Binding .}"/>
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToDetailCommand}"
+                                        CommandParameter="{Binding .}"/>
                                 </Border.GestureRecognizers>
                                 <Grid Padding="0">
                                     <Image Aspect="AspectFill"
@@ -128,11 +135,29 @@
                                     <Grid RowDefinitions="Auto,Auto,*" Margin="30">
                                         <Label TextColor="White" Text="{Binding Title}" FontSize="22" FontAttributes="Bold" Opacity="1"></Label>
                                         <Label Grid.Row="1" TextColor="White" Text="{Binding Subtitle}" Margin="0,10" FontSize="16" FontAttributes="Bold" Opacity="1"></Label>
-                                        <Grid Grid.Row="2" ColumnDefinitions="*,*"
-                                              RowDefinitions="*,*">
+                                        <Grid Grid.Row="2" ColumnDefinitions="*,*">
                                             <!--<material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity=".7"/>-->
-                                            <material:MauiIcon Grid.Column="1" Grid.Row="1" Icon="Headset" IconColor="White" Opacity="1" IconSize="20"/>
+                                            <material:MauiIcon Grid.Column="0" Icon="Headset" IconColor="White" Opacity="1" IconSize="20" HorizontalOptions="End"/>
                                             <!--<Image Aspect="Center" Source="{material:Icon Icon=Headset}"/>-->
+
+                                            <Border BackgroundColor="Transparent" StrokeThickness="0" Margin="10,0,10,10"
+                                                    Grid.Column="1">
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="2"/>
+                                                </Border.StrokeShape>
+                                                <Border.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=GoToCourseListEditCommand}"
+                                                        CommandParameter="{Binding .}"/>
+                                                </Border.GestureRecognizers>
+                                                <material:MauiIcon
+                                                    Icon="Edit"
+                                                    IconColor="White"
+                                                    Opacity="1"
+                                                    IconSize="20"
+                                                    IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:CourseListViewModel}}, Path=IsAdmin}"
+                                                    />
+                                            </Border>
                                         </Grid>
                                     </Grid>
                                 </Grid>

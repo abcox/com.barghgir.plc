@@ -26,6 +26,10 @@ namespace com.barghgir.plc.data.Helpers
         
         public static readonly string[] domainNames = new string[] { "Course" };
 
+        /// <summary>
+        /// EXPERIMENTAL
+        /// </summary>
+        /// <param name="dbContext"></param>
         public static void SeedTablesFromJsonFiles2(AppDbContext dbContext)
         {
             foreach (string domainName in domainNames)
@@ -76,7 +80,7 @@ namespace com.barghgir.plc.data.Helpers
         {
             var content = await DataHelper.GetJsonFromFile<Content>(Path.Combine(baseDir, @"seed\Content.json"));
             if (content != null) dbContext.Contents.AddRange(content);
-            await SeedFromJsonFiles_SaveChanges(dbContext, "Contents");
+            await SeedFromJsonFiles_SaveChanges(dbContext, "Content");
         }
 
         public static async Task SeedFromJsonFiles_TableCourse(CcaDevContext dbContext, string baseDir)
