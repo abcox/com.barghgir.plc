@@ -23,6 +23,10 @@ There are 2 projects that deliver the solution. They are:
     ```
     Note: use single-quotes around connection string to fix "Login failed for user '< some-sql-username >'"
 
+4. Entity Framework Core
+    - Managing Database Schemas / [Reverse Engineering](https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli)
+    - Miscellaneous / [Connection Strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings)
+
 # Road Map
 
 1. Configure keyvault
