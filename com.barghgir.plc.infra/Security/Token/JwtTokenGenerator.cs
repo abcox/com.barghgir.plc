@@ -22,7 +22,7 @@ public class JwtTokenGenerator : IJwtTokenGenerator
         _jwtOptions = jwtOptions.Value;
         _jwtOptions.ValidFor = new TimeSpan(0, 0, 30, 0, 0);
         //_jwtTokenHandler = jwtTokenHandler;
-        this.info = apiOptions.Value.Info;
+        this.info = apiOptions.Value.AppInfo;
     }
 
     public async Task<string> CreateToken(string email, string id, bool isAdmin = false)

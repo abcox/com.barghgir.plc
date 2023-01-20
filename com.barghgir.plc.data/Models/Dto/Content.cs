@@ -18,7 +18,7 @@ public class Content
     [IgnoreDataMember]
     public int Index { get; set; }
 
-    public static Content GetContent(Context.Content content)
+    public static Content GetContent(Context.Content? content)
     {
         if (content == null) return new Content();
         else return new Content

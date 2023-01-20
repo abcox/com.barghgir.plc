@@ -27,13 +27,71 @@ There are 2 projects that deliver the solution. They are:
     - Managing Database Schemas / [Reverse Engineering](https://learn.microsoft.com/en-us/ef/core/managing-schemas/scaffolding/?tabs=dotnet-core-cli)
     - Miscellaneous / [Connection Strings](https://learn.microsoft.com/en-us/ef/core/miscellaneous/connection-strings)
 
+5. Azure
+    - Login:  `Login-AzAccount`
+
 # Road Map
 
 1. Configure keyvault
     1. Setup API appsettings and configuration pipeline
     2. Script keyvault secret powershell - and encrypt this before pushing to code repo (place encryption key in vault) with instructions about the name
 
+# Troubleshooting
 
+## Azure
+
+- [Enterprise Application (cca-managed-ident-01)](https://portal.azure.com/?feature.msaljs=false#view/Microsoft_AAD_IAM/ManagedAppMenuBlade/~/Overview/objectId/98330525-9c64-4fd9-a47d-48b2de7618c8/appId/031f1b49-6dca-4132-8539-90b8fb54e149)
+- [App barghgir-cca-236217f7-0ad4-4dd6-8553-dc4b574fd2c5](https://portal.azure.com/?feature.msaljs=false#view/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/~/Credentials/appId/dd1f0fb0-ef23-4188-8fdb-758a763028e4/isMSAApp~/false)
+
+1. Initial attempt to configure KeyVault (Name: cca-cc-rg-01-kv) raised exception:
+   
+   NOTES: followed [Azure Key Vault configuration provider in ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-7.0)
+    ```
+    Azure.Identity.CredentialUnavailableException: 'DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+    - EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+    - ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+    - Process "C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS001: This account 'adam.cox@ceridian.com' needs re-authentication. Please go to Tools->Options->Azure Services Authentication, and re-authenticate the account you want to use..
+    - Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+    - Please run 'az login' to set up account
+    - PowerShell is not installed.'
+    ```
+    Incorrect account (adam.cox@ceridian.com) was selected. After selected correct account (adam.cox@vorba.com), the following exception message was presented:
+
+    ```
+    Azure.Identity.CredentialUnavailableException: 'DefaultAzureCredential failed to retrieve a token from the included credentials. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/defaultazurecredential/troubleshoot
+    - EnvironmentCredential authentication unavailable. Environment variables are not fully configured. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/environmentcredential/troubleshoot
+    - ManagedIdentityCredential authentication unavailable. Multiple attempts failed to obtain a token from the managed identity endpoint.
+    - Process "C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\Asal\TokenService\Microsoft.Asal.TokenService.exe" has failed with unexpected error: TS003: Error, TS004: Unable to get access token.  'AADSTS50020: User account '{EmailHidden}' from identity provider 'live.com' does not exist in tenant 'Microsoft Services' and cannot access the application '872cd9fa-d31f-45e0-9eab-6e460a02d1f1'(Visual Studio) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account.
+    Trace ID: b39c71cb-93f1-4e5b-ab1a-fc1020af6c00
+    Correlation ID: be90d10c-5361-45bc-b38a-7aeb26b76568
+    Timestamp: 2023-01-17 19:15:55Z'.
+    - Stored credentials not found. Need to authenticate user in VSCode Azure Account. See the troubleshooting guide for more information. https://aka.ms/azsdk/net/identity/vscodecredential/troubleshoot
+    - Please run 'az login' to set up account
+    - PowerShell is not installed.'
+    ```
+    The log after successfully using the Connected Services dialog to connect Azure Key Vault:
+    ```
+    Verifying that your application running locally will have access to the key vault...
+    Connecting to Azure Key Vault dependency secrets1 in the project...
+    Configuring settings files...
+    Adding settings to C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\Properties\launchSettings.json...
+    Adding profiles/com.barghgir.plc.api/environmentVariables/VaultUri to C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\Properties\launchSettings.json...
+    Adding profiles/com.barghgir.plc.api/environmentVariables/AZURE_USERNAME to C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\Properties\launchSettings.json...
+    Adding profiles/IIS Express/environmentVariables/VaultUri to C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\Properties\launchSettings.json...
+    Adding profiles/IIS Express/environmentVariables/AZURE_USERNAME to C:\Users\adam\source\repos\com.barghgir.plc\com.barghgir.plc.api\Properties\launchSettings.json...
+    Skipping secrets modification, store is not specified...
+    Installing NuGet packages to project...
+    Installing package 'Azure.Identity' with version '1.6.0'.
+    Installing package 'Azure.Extensions.AspNetCore.Configuration.Secrets' with version '1.0.0'.
+    Skipping package 'Azure.Extensions.AspNetCore.Configuration.Secrets', same version or a newer version is already installed.
+    Uninstalling package 'Microsoft.AspNetCore.AzureKeyVault.HostingStartup'.
+    Uninstalling package 'Azure.Extensions.Configuration.Secrets'.
+    Inserting code...
+    Inserting code...
+    Serializing new Azure Key Vault dependency metadata to disk...
+    Generating ARM template...
+    SuccessComplete. Azure Key Vault secrets1 is configured.
+    ```
 
 # References
 

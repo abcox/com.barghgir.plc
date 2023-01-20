@@ -104,13 +104,20 @@ public class CourseController : ControllerBase
                 return BadRequest();
             }
 
+            var imgSourceUrl = options?.Images?.SourceUrl;
+            var imgWidthPx = options?.Images?.DetailBackgroundSize?.WidthPx ?? 0;
+            var imgHeightPx = options?.Images?.DetailBackgroundSize?.HeightPx ?? 0;
             response = new Course(course)
             {
-                Content = course.CourseContents.OrderBy(x => x.SortOrder ?? course.CourseContents.Count).Select(x => data.Models.Content.GetContent(x.Content)).ToList(),
-                ImageUrl = $"{options.Images.SourceUrl}/{course.ImageId}/{options.Images.DetailBackgroundSize.WidthPx}/{options.Images.DetailBackgroundSize.HeightPx}"
+                Content = course.CourseContents.OrderBy(x => x.SortOrder ?? course.CourseContents.Count).Select(x => data.Models.Content.GetContent(x?.Content)).ToList(),
+                ImageUrl = $"{imgSourceUrl}/{course.ImageId}/{imgWidthPx}/{imgHeightPx}"
             };
             var i = 1;
-            response.Content.ToList().ForEach(x => x.Index = i++);
+            response.Content.ToList().ForEach(x => {
+                x.Index = i++;
+                x.DurationSeconds = x.DurationSeconds ?? 0;
+                x.DurationDisplay = $"{x.DurationSeconds / 60}:{$"{(x.DurationSeconds ?? 0) % 60}".PadLeft(2, '0')}";
+            });
         }
         catch (Exception ex)
         {

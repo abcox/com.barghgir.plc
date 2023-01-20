@@ -1,4 +1,5 @@
 using com.barghgir.plc.common.Configuration;
+using com.barghgir.plc.common.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
@@ -29,6 +30,13 @@ namespace com.barghgir.plc.api.Controllers
         [Route("app", Name = "GetAppConfig")]
         public ApiOptions? GetAppConfig()
         {
+            options.Azure.Environment.ClientId = options.Azure.Environment.ClientId.RedactString();
+            options.Azure.Environment.ClientSecret = options.Azure.Environment.ClientSecret.RedactString();
+            options.Azure.Environment.TenantId = options.Azure.Environment.TenantId.RedactString();
+            options.ConnectionStrings.AppDbContext = options.ConnectionStrings.AppDbContext.RedactConnectionStringPassword();
+            options.Security.AesEncryptionIVector = options.Security.AesEncryptionIVector.RedactString();
+            options.Security.AesEncryptionKey = options.Security.AesEncryptionKey.RedactString();
+
             return options;
         }
     }

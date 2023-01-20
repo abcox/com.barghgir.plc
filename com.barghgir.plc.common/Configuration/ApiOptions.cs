@@ -2,17 +2,40 @@
 
 public sealed class ApiOptions
 {
+    public ConnectionStrings? ConnectionStrings { get; set; }
     public LoggingOptions? Logging { get; set; }
     public string? AllowedHosts { get; set; }
     public ImagesOptions? Images { get; set; }
     public SecurityOptions? Security { get; set; }
-    public AppInfo? Info { get; set; }
+    public AppInfo? AppInfo { get; set; }
     public AzureOptions? Azure { get; set; }
+}
+
+public class ConnectionStrings
+{
+    public string? AppDbContext { get; set; }
 }
 
 public class AzureOptions
 {
+    public AzureEnvironmentOptions? Environment { get; set; }
     public StorageOptions? Storage { get; set; }
+    public KeyVaultOptions? KeyVault { get; set; }
+}
+
+public class AzureEnvironmentOptions
+{
+    public string? ClientId { get; set; }
+    public string? ClientSecret { get; set; }
+    public string? SubscriptionName { get; set; }
+    public string? TenantId { get; set; }
+}
+
+public class KeyVaultOptions
+{
+    public string? Name { get; set; }
+    public string? Prefix { get; set; }
+    public string? Url { get; set; }
 }
 
 public class StorageOptions
@@ -24,6 +47,7 @@ public class AppInfo
 {
     public string? ContactName { get; set; }
     public string? ContactEmail { get; set; }
+    public string? Environment { get; set; }
 }
 
 public class SecurityOptions

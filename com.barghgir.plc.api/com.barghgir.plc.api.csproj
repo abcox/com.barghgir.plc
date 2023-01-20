@@ -7,17 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+    <PackageReference Include="Azure.Identity" Version="1.6.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.21.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\com.barghgir.plc.common\com.barghgir.plc.common.csproj" />
     <ProjectReference Include="..\com.barghgir.plc.data\com.barghgir.plc.data.csproj" />
     <ProjectReference Include="..\com.barghgir.plc.infra\com.barghgir.plc.infra.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Helpers\" />
   </ItemGroup>
 
 </Project>
