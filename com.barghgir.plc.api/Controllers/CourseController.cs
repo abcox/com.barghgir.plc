@@ -8,6 +8,7 @@ using System.Linq;
 using com.barghgir.plc.common.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Azure;
+using Microsoft.Extensions.Hosting;
 
 namespace com.barghgir.plc.api.Controllers;
 
@@ -82,6 +83,31 @@ public class CourseController : ControllerBase
             logger.LogError($"Something exceptional happened. {ex.Message}");
         }
         return Ok(response);
+    }
+
+    [HttpPut]
+    [ProducesResponseType(typeof(IEnumerable<CourseWithoutContent>), StatusCodes.Status200OK)]
+    [Route("update", Name = "UpdateCourseItem")]
+    public IActionResult UpdateCourseItem(Course course)
+    {
+        var id = course.Id;
+        Context.Course? entity = dbContext.Courses.Find(course.Id);
+        if  (entity == null)
+        {
+            logger.LogWarning($"Course not found for Id {id}");
+            return new BadRequestObjectResult(new { id, message = "not found" });
+        }
+        try
+        {
+            dbContext.Entry(entity).CurrentValues.SetValues(course);
+            dbContext.SaveChanges();
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(ex.Message);
+            return new BadRequestObjectResult(new { id, message = ex.Message });
+        }
+        return Ok(course);
     }
 
     [HttpGet]

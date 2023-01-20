@@ -26,7 +26,6 @@ const string AZURE_CLIENT_SECRET = "AZURE_CLIENT_SECRET";
 const string AZURE_TENANT_ID = "AZURE_TENANT_ID";
 const string ASPNETCORE_ENVIRONMENT_NAME = "ASPNETCORE_ENVIRONMENT";
 const string DEFAULT_ENVIRONMENT_NAME = "Release";
-string? env = Environment.GetEnvironmentVariable(ASPNETCORE_ENVIRONMENT_NAME) ?? DEFAULT_ENVIRONMENT_NAME;
 
 var builder = WebApplication.CreateBuilder(args);
 var isProduction = builder.Environment?.IsProduction() ?? true;
@@ -38,16 +37,17 @@ var configuration = builder.Configuration;
 if (configuration == null)
     throw new ArgumentNullException(nameof(configuration));
 
-if (env != null)
-{
-    var appsettingsFileName = env.Equals(DEFAULT_ENVIRONMENT_NAME) ?
-        "appsettings.json" : $"appsettings.{env}.json";
+var env = Environment.GetEnvironmentVariable(ASPNETCORE_ENVIRONMENT_NAME) ?? DEFAULT_ENVIRONMENT_NAME;
+if (env == null)
+    throw new ArgumentNullException(nameof(configuration));
 
-    if (!env.Equals(DEFAULT_ENVIRONMENT_NAME) && !File.Exists(appsettingsFileName))
-        throw new ArgumentNullException($"File {appsettingsFileName} not found");
+var appsettingsFileName = env.Equals(DEFAULT_ENVIRONMENT_NAME) ?
+    "appsettings.json" : $"appsettings.{env}.json";
 
-    configuration.AddJsonFile(appsettingsFileName, false, true);
-}
+if (!File.Exists(appsettingsFileName))
+    throw new ApplicationException($"File not found: {appsettingsFileName}");
+
+configuration.AddJsonFile(appsettingsFileName, false, true);
 
 //if (env.Equals(DEFAULT_ENVIRONMENT_NAME))
 builder.AddSerilog();
@@ -97,17 +97,12 @@ Environment.SetEnvironmentVariable(AZURE_CLIENT_ID, options?.Azure?.Environment?
 //Environment.SetEnvironmentVariable(AZURE_CLIENT_SECRET, options?.Azure?.Environment?.ClientSecret); // TODO: this value needs to be setup in the appsvc resource prior to publishing --> make release pipeline tasks that setup the resources and configure them
 Environment.SetEnvironmentVariable(AZURE_TENANT_ID, options?.Azure?.Environment?.TenantId);
 
-//var keyVaultName = options?.Azure?.KeyVault?.Name;
-//if (keyVaultName == null)
-//    logger.LogWarning("keyVaultName config missing");
-//    throw new ArgumentNullException(nameof(keyVaultName));
-
 //var keyVauleUrl = $"https://{keyVaultName}.vault.azure.net/";
 string keyVaultUrl = options?.Azure?.KeyVault?.Url ?? string.Empty;
 if (string.IsNullOrEmpty(keyVaultUrl))
 {
-    logger.LogCritical($"{nameof(keyVaultUrl)} missing");
-    throw new ArgumentNullException(nameof(keyVaultUrl));
+    logger.LogCritical($"Appsetting not found: {nameof(keyVaultUrl)}");
+    throw new ApplicationException($"Appsetting not found: {nameof(keyVaultUrl)}");
 }
 configuration.AddAzureKeyVault(
     new Uri(keyVaultUrl),

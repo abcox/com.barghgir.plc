@@ -36,6 +36,15 @@ There are 2 projects that deliver the solution. They are:
     1. Setup API appsettings and configuration pipeline
     2. Script keyvault secret powershell - and encrypt this before pushing to code repo (place encryption key in vault) with instructions about the name
 
+
+# Deployment
+
+1. Create and configure App Service resource
+    - to provide authority to keyvault, copy [secret value (Secret ID: 740ede77-1af8-421b-9aab-76877ff4ab14)](https://portal.azure.com/?feature.msaljs=false#view/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/~/Credentials/appId/56c4326a-6c85-45e7-932a-050350068559/isMSAApp~/false) to Settings / Configuration value named `AZURE_CLIENT_SECRET`, and
+    - set up keyvault Access policy for the application (i.e. [com.barghgir.plc](https://portal.azure.com/?feature.msaljs=false#view/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/~/Overview/appId/56c4326a-6c85-45e7-932a-050350068559/isMSAApp~/false))
+2. Publish API from project
+
+
 # Troubleshooting
 
 ## Azure
@@ -92,6 +101,10 @@ There are 2 projects that deliver the solution. They are:
     Generating ARM template...
     SuccessComplete. Azure Key Vault secrets1 is configured.
     ```
+
+2. `HTTP Error 500.30 - ASP.NET Core app failed to start`
+    - review logs and appsettings
+
 
 # References
 
